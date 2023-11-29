@@ -16,10 +16,10 @@ use App\Http\Controllers\Auth\ProfileController;
 |
 */
 
-Route::post('/register', [RegisterController::class, 'register'])->name('api.register');
-Route::post('/confirm-otp', [RegisterController::class, 'confirmOtp'])->name('api.confirmOtp');
-Route::post('/register-user', [RegisterController::class, 'registerUser'])->name('api.registerUser');
-Route::post('profile/complete', [ProfileController::class, 'complete'])->name('api.profile.complete');
+Route::post('/api/send-otp', [RegisterController::class, 'sendOTP']);
+Route::post('/api/verify-otp', [RegisterController::class, 'verifyOTP']);
+Route::post('/api/finalize-registration', [RegisterController::class, 'finalizeRegistration']);
+
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

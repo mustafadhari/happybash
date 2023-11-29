@@ -32,10 +32,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// registration route
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+// Place custom authentication routes here
+Route::get('/register', function () {
+    Log::info('Register route accessed');
+    return view('auth.register');
+})->name('register');
+Route::post('/send-otp', [RegisterController::class, 'sendOTP'])->name('send-otp');
+Route::get('/verify', function () { return view('auth.verify'); })->name('verify');
+Route::post('/verify-otp', [RegisterController::class, 'verifyOTP'])->name('verify-otp');
+Route::post('/finalize-registration', [RegisterController::class, 'finalizeRegistration'])->name('finalize-registration');
 
-Route::post('register', [RegisterController::class, 'register'])->name('api.register');
+
 
 // Product routes
 Route::resource('products', ProductController::class);
@@ -67,7 +74,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
     Route::get('logout', [CustomerLoginController::class, 'logout']);
 
-    Route::get('{any}', [HomeController::class, 'index']);
+    //Route::get('{any}', [HomeController::class, 'index']);
 });
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -83,9 +90,3 @@ Route::get('/account', [AccountController::class, 'index']);
 Route::get('/address', [AddressController::class, 'index']);
 
 Route::get('/auth-404', [Auth404Controller::class, 'index']);
-
-Route::get('otp-confirm', [RegisterController::class, 'showOtpForm'])->name('otp.confirm');
-
-Route::get('profile/complete', [ProfileController::class, 'showCompleteForm'])->name('profile.complete');
-
-Route::post('profile/complete', [ProfileController::class, 'complete'])->name('profile.complete');

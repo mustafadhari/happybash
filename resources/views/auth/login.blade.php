@@ -11,7 +11,7 @@
                             <div class="card-header bg-primary border-0">
                                 <div class="row">
                                     <div class="col-lg-4 col-3">
-                                        <img src="{{ URL::asset('images/auth/img-1.png') }}" alt=""
+                                        <img src="{{ URL::asset('build/images/auth/img-1.png') }}" alt=""
                                             class="img-fluid">
                                     </div>
                                     <div class="col-lg-8 col-9">
@@ -86,9 +86,9 @@
                                     </form>
 
                                     <div class="text-center mt-5">
-                                        <p class="mb-0">Don't have an account ? <a href="{{ route('register') }}"
+                                        <!-- <p class="mb-0">Don't have an account ? <a href="{{ route('register') }}"
                                                 class="fw-semibold text-secondary text-decoration-underline"> Sign Up</a>
-                                        </p>
+                                        </p> -->
                                     </div>
                                 </div>
                             </div>
@@ -120,5 +120,5 @@
     </div>
 @endsection
 @section('scripts')
-    <script src="{{ URL::asset('js/pages/password-addon.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/pages/password-addon.init.js') }}"></script>
 @endsection
