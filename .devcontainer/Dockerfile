@@ -24,7 +24,7 @@ RUN apt-get update \
 
 # Start MySQL and create a database
 RUN service mysql start && \
-    mysql -e "CREATE DATABASE laravel;"
+    mysql -e "CREATE DATABASE happybash;"
 
 # Set working directory
 WORKDIR /var/www
