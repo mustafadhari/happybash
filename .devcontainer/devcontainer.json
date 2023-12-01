@@ -1,14 +1,11 @@
 {
-  "name": "Laravel",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "forwardPorts": [8000],
-  "extensions": [
-    "felixfbecker.php-debug"
-  ],
-  "remoteUser": "vscode"
+    "name": "Laravel with MySQL",
+    "dockerFile": "Dockerfile",
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "forwardPorts": [8000],
+    "extensions": [
+        "felixfbecker.php-debug"
+    ]
 }
