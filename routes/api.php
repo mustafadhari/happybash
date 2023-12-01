@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ProfileController;
+use App\Http\Controllers\DeviceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,10 @@ use App\Http\Controllers\Auth\ProfileController;
 |
 */
 
-Route::post('/api/send-otp', [RegisterController::class, 'sendOTP']);
-Route::post('/api/verify-otp', [RegisterController::class, 'verifyOTP']);
-Route::post('/api/finalize-registration', [RegisterController::class, 'finalizeRegistration']);
+Route::post('/send-otp', [RegisterController::class, 'sendOTP']);
+Route::post('/verify-otp', [RegisterController::class, 'verifyOTP']);
+Route::post('/finalize-registration', [RegisterController::class, 'finalizeRegistration']);
+Route::middleware('auth:sanctum')->post('/register-device', [DeviceController::class, 'register']);
 
 
 

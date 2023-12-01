@@ -94,65 +94,17 @@ class RegisterController extends Controller
 
     // Method to handle OTP generation and sending
     public function sendOTP(Request $request) {
-        Log::info('sendOTP method called');
-
         $validatedData = $request->validate([
             'phone' => 'required|digits:10|unique:users',
         ]);
+        Log::info('$validatedData');
         $countryCode = '+91';
-        $fullMobileNumber = $countryCode . $request->mobile;
+        $fullMobileNumber = $countryCode . $request->phone;
         $otp = rand(1000, 9999); // Generate OTP
         $this->sendTwilioOTP($fullMobileNumber, $otp);
     
-        // Replace this with actual SMS sending logic
-        // $smsService->sendSMS($mobile, "Your OTP is: $otp");
-    
-        session(['otp' => $otp, 'mobile' => $mobile]); // Store OTP and mobile in session
+        session(['otp' => $otp, 'phone' => $fullMobileNumber]); // Store OTP and mobile in session
         return redirect()->route('verify'); // Redirect to OTP verification view
-    }
-
-    // Method for OTP verification
-    public function verifyOTP(Request $request) {
-        $request->validate([
-            'otp' => 'required|digits:4',
-        ]);
-
-        $sid = env('TWILIO_SID');
-        $token = env('TWILIO_AUTH_TOKEN');
-        $twilio_verify_sid = env('TWILIO_VERIFY_SID');
-
-        $twilio = new Client($sid, $token);
-
-        $verification = $twilio->verify->v2->services($twilio_verify_sid)
-            ->verificationChecks
-            ->create($request->otp, ["to" => session('mobile')]);
-
-        if ($verification->valid) {
-            // OTP is correct, proceed to email and password entry
-            return view('auth.finalize_registration', ['mobile' => session('mobile')]);
-        } else {
-            // Incorrect OTP
-            return back()->withErrors(['otp' => 'The provided OTP is incorrect.']);
-        }
-    }
-
-    // Finalize registration and create user
-    public function finalizeRegistration(Request $request) {
-        $validatedData = $request->validate([
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8|confirmed',
-        ]);
-
-        User::create([
-            'mobile' => session('mobile'),
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        // Clear the session
-        session()->forget(['otp', 'mobile']);
-
-        // TODO: Redirect to login or directly log in the user
     }
 
     protected function sendTwilioOTP($mobile, $otp) {
@@ -169,5 +121,71 @@ class RegisterController extends Controller
         // Store OTP in session for later verification
         session(['otp' => $otp]);
     }
+
+    // Method for OTP verification
+    public function verifyOTP(Request $request) {
+        $request->validate([
+            'otp' => 'required|digits:6',
+        ]);
+    
+        $sid = env('TWILIO_SID');
+        $token = env('TWILIO_AUTH_TOKEN');
+        $twilio_verify_sid = env('TWILIO_VERIFY_SID');
+    
+        $twilio = new Client($sid, $token);
+    
+        try {
+            $verification = $twilio->verify->v2->services($twilio_verify_sid)
+                ->verificationChecks
+                ->create([
+                    'to' => session('phone'), // The phone number
+                    'code' => $request->otp, // The OTP entered by the user
+                ]);
+    
+            if ($verification->valid) {
+                if ($request->expectsJson()) {
+                    // Mobile app is expecting a JSON response
+                    return response()->json(['message' => 'OTP verified successfully']);
+                } else {
+                    // Web app, redirect to the appropriate page
+                    return redirect()->route('finalize-registration-form');
+                }
+            } else {
+                if ($request->expectsJson()) {
+                    // Mobile app error response
+                    return response()->json(['error' => 'Invalid OTP'], 400);
+                } else {
+                    // Web app, redirect back with error
+                    return back()->withErrors(['otp' => 'Invalid OTP']);
+                }
+            }
+        } catch (\Exception $e) {
+            // Handle any exceptions
+            Log::error("Twilio verification error: " . $e->getMessage());
+            return back()->withErrors(['otp' => 'There was an error verifying the OTP.']);
+        }
+    }
+    
+
+    // Finalize registration and create user
+    public function finalizeRegistration(Request $request) {
+        $validatedData = $request->validate([
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
+        User::create([
+            'phone' => session('mobile'),
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        // Clear the session
+        session()->forget(['otp', 'phone']);
+
+        // TODO: Redirect to login or directly log in the user
+    }
+
+    
 
 }

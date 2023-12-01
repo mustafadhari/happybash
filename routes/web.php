@@ -34,13 +34,16 @@ Route::get('/', function () {
 
 // Place custom authentication routes here
 Route::get('/register', function () {
-    Log::info('Register route accessed');
     return view('auth.register');
 })->name('register');
 Route::post('/send-otp', [RegisterController::class, 'sendOTP'])->name('send-otp');
 Route::get('/verify', function () { return view('auth.verify'); })->name('verify');
 Route::post('/verify-otp', [RegisterController::class, 'verifyOTP'])->name('verify-otp');
 Route::post('/finalize-registration', [RegisterController::class, 'finalizeRegistration'])->name('finalize-registration');
+Route::get('/finalize-registration-form', function () {
+    return view('auth.finalize_registration');
+})->name('finalize-registration-form');
+
 
 
 
