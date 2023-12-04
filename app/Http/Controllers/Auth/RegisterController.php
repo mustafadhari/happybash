@@ -95,14 +95,14 @@ class RegisterController extends Controller
     // Method to handle OTP generation and sending
     public function sendOTP(Request $request) {
         $validatedData = $request->validate([
-            'phone' => 'required|digits:10|unique:users',
+            'country_code' => 'required',
+            'phone' => 'required|unique:users',
         ]);
-        Log::info('$validatedData');
-        $countryCode = '+91';
-        $fullMobileNumber = $countryCode . $request->phone;
+        //$countryCode = '+91';
+        $fullMobileNumber = $validatedData['country_code'] . $validatedData['phone'];
         $otp = rand(1000, 9999); // Generate OTP
         $this->sendTwilioOTP($fullMobileNumber, $otp);
-    
+
         session(['otp' => $otp, 'phone' => $fullMobileNumber]); // Store OTP and mobile in session
         return redirect()->route('verify'); // Redirect to OTP verification view
     }
@@ -117,7 +117,7 @@ class RegisterController extends Controller
         $twilio->verify->v2->services($twilio_verify_sid)
             ->verifications
             ->create($mobile, "sms", ["locale" => "en"]);
-
+            
         // Store OTP in session for later verification
         session(['otp' => $otp]);
     }
@@ -127,13 +127,13 @@ class RegisterController extends Controller
         $request->validate([
             'otp' => 'required|digits:6',
         ]);
-    
+
         $sid = env('TWILIO_SID');
         $token = env('TWILIO_AUTH_TOKEN');
         $twilio_verify_sid = env('TWILIO_VERIFY_SID');
-    
+
         $twilio = new Client($sid, $token);
-    
+
         try {
             $verification = $twilio->verify->v2->services($twilio_verify_sid)
                 ->verificationChecks
@@ -141,7 +141,7 @@ class RegisterController extends Controller
                     'to' => session('phone'), // The phone number
                     'code' => $request->otp, // The OTP entered by the user
                 ]);
-    
+
             if ($verification->valid) {
                 if ($request->expectsJson()) {
                     // Mobile app is expecting a JSON response
@@ -165,7 +165,7 @@ class RegisterController extends Controller
             return back()->withErrors(['otp' => 'There was an error verifying the OTP.']);
         }
     }
-    
+
 
     // Finalize registration and create user
     public function finalizeRegistration(Request $request) {
@@ -186,6 +186,6 @@ class RegisterController extends Controller
         // TODO: Redirect to login or directly log in the user
     }
 
-    
+
 
 }
