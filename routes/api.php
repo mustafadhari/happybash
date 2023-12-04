@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubcategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,10 @@ Route::post('/send-otp', [RegisterController::class, 'sendOTP']);
 Route::post('/verify-otp', [RegisterController::class, 'verifyOTP']);
 Route::post('/finalize-registration', [RegisterController::class, 'finalizeRegistration']);
 Route::middleware('auth:sanctum')->post('/register-device', [DeviceController::class, 'register']);
+
+Route::apiResource('categories', CategoryController::class);
+Route::get('/categories/{category_id}/subcategories', [SubcategoryController::class, 'index']);
+
 
 
 
