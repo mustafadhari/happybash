@@ -12,10 +12,27 @@
                 <div class="card-body">
                 <form action="{{ route('send-otp') }}" method="POST">
                         @csrf
-
+                        @php
+                        $countries = [
+                            '+965' => 'Kuwait',
+                            '+91' => 'India',
+                        ];
+                        @endphp
                         <div class="row mb-3">
+                            <label for="country_code" class="col-md-4 col-form-label text-md-end">{{ __('Country:') }}</label>
+                            <div class="col-md-6">
+                                <select name="country_code" id="country_code">
+                                    @foreach ($countries as $code => $country)
+                                        <option value="{{ $code }}">{{ $country }}</option>
+                                    @endforeach
+                                </select>
+                                @error('country_code')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Enter your phone number') }}</label>
-
                             <div class="col-md-6">
                                 <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
 
@@ -41,7 +58,7 @@
     </div>
 </div>
 
-    
+
 @endsection
 
 @section('scripts')
