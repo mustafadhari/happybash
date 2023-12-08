@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Device extends Model
 {
     use HasFactory;
-    protected $fillable = ['device_token', 'user_id', 'device_type'];
+    protected $fillable = ['unique_device_id', 'notification_token', 'device_type'];
 }

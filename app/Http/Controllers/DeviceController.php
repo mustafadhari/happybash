@@ -2,31 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Device;
 use Illuminate\Http\Request;
-use App\Models\Device; // Assuming you have a Device model
+use Illuminate\Support\Facades\Log;
+
 
 class DeviceController extends Controller
 {
     public function register(Request $request)
     {
-        $validatedData = $request->validate([
-            'device_token' => 'required|string',
-            'user_id' => 'required|integer',
-            'device_type' => 'required|string', // e.g., 'android', 'ios'
+        $validated = $request->validate([
+            'DeviceType' => 'required|integer',
+            'UniqueDeviceId' => 'required|string',
+            'NotificationToken' => 'required|string',
+            'ClientKey' => 'required|string',
         ]);
 
-        // Check if the device is already registered
-        $device = Device::where('device_token', $validatedData['device_token'])->first();
-
-        if (!$device) {
-            $device = new Device();
+        // Verify the ClientKey here
+        $client_key = env('CLIENT_KEY');
+        $receivedKey = (string) trim($request->input('ClientKey'));
+        if ($receivedKey !== $client_key) {
+            return response()->json(['Message' => 'Unauthorized', 'Status' => 1], 401);
         }
 
-        // Update or create device record
-        $device->fill($validatedData);
-        $device->save();
+        Device::updateOrCreate(
+            ['unique_device_id' => $validated['UniqueDeviceId']],
+            [
+                'device_type' => $validated['DeviceType'],
+                'notification_token' => $validated['NotificationToken'],
+            ]
+        );
 
-        return response()->json(['message' => 'Device registered successfully']);
+        return response()->json(['Message' => 'Success', 'Status' => 0]);
     }
 }
-
