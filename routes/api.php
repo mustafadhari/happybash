@@ -7,6 +7,9 @@ use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubcategoryController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\AddressController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +36,17 @@ Route::get('/categories/{category_id}/subcategories', [SubcategoryController::cl
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// API route for login
+Route::post('/login', [LoginController::class, 'apiLogin']);
+Route::apiResource('locations', LocationController::class);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/locations', [LocationController::class, 'index']);
+    Route::get('/user/location', [UserLocationController::class, 'show']);
+    Route::put('/user/location', [UserLocationController::class, 'update']);
+    Route::get('/addresses', [AddressController::class, 'index']);
+    Route::post('/addresses', [AddressController::class, 'store']);
+    Route::put('/addresses/{address}', [AddressController::class, 'update']);
+    Route::delete('/addresses/{address}', [AddressController::class, 'destroy']);
+});
+

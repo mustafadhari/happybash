@@ -85,6 +85,11 @@ class User extends Authenticatable
     {
         return $this->hasMany(Address::class);
     }
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class, 'location_id'); // 'location_id' is the foreign key in the users table.
+    }
 }
 
 
