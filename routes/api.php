@@ -25,7 +25,7 @@ use App\Http\Controllers\AddressController;
 Route::post('/send-otp', [RegisterController::class, 'sendOTP']);
 Route::post('/verify-otp', [RegisterController::class, 'verifyOTP']);
 Route::post('/finalize-registration', [RegisterController::class, 'finalizeRegistration']);
-Route::middleware('auth:sanctum')->post('/register-device', [DeviceController::class, 'register']);
+Route::post('/register-device', [DeviceController::class, 'register']);
 
 Route::apiResource('categories', CategoryController::class);
 Route::get('/categories/{category_id}/subcategories', [SubcategoryController::class, 'index']);
