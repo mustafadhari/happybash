@@ -34,10 +34,13 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        // Check if the request expects a JSON response (likely an API call)
+        // Check if the request is from the API (expects a JSON response)
         if ($request->expectsJson()) {
             $token = $user->createToken('MobileAppAccess')->plainTextToken;
-            return response()->json(['token' => $token]);
+            return response()->json([
+                'message' => 'Authentication successful.',
+                'token' => $token
+            ]);
         }
 
         // For web requests, redirect to the intended location
@@ -63,17 +66,24 @@ class LoginController extends Controller
 
     public function apiLogin(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string',
+        ]);
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $token = $user->createToken('MobileAppAccess')->plainTextToken;
-            return response()->json(['token' => $token]);
+            return response()->json([
+                'message' => 'Login successful.',
+                'token' => $token
+            ]);
         }
 
-        throw ValidationException::withMessages([
-            'email' => ['The provided credentials are incorrect.'],
-        ]);
+        return response()->json([
+            'message' => 'The provided credentials are incorrect.'
+        ], 401);
     }
+
 
 }

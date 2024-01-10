@@ -41,7 +41,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/login', [LoginController::class, 'apiLogin']);
 Route::apiResource('locations', LocationController::class);
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/locations', [LocationController::class, 'index']);
+    //Route::get('/locations', [LocationController::class, 'index']);
     Route::get('/user/location', [UserLocationController::class, 'show']);
     Route::put('/user/location', [UserLocationController::class, 'update']);
     Route::get('/addresses', [AddressController::class, 'index']);

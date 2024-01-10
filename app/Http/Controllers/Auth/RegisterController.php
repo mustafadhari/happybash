@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Twilio\Rest\Client;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -104,7 +105,14 @@ class RegisterController extends Controller
         $this->sendTwilioOTP($fullMobileNumber, $otp);
 
         session(['otp' => $otp, 'phone' => $fullMobileNumber]); // Store OTP and mobile in session
-        return redirect()->route('verify'); // Redirect to OTP verification view
+        // Check if the request expects a JSON response
+        if ($request->expectsJson()) {
+            // Return a JSON response
+            return response()->json(['message' => 'OTP sent successfully']);
+        } else {
+            // Redirect to OTP verification view
+            return redirect()->route('verify');
+        }
     }
 
     protected function sendTwilioOTP($mobile, $otp) {
@@ -171,20 +179,37 @@ class RegisterController extends Controller
     public function finalizeRegistration(Request $request) {
         $validatedData = $request->validate([
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:8|confirmed',
+            'password' => 'required|min:8',
+            'phone' => 'sometimes|required|unique:users,phone',
         ]);
-
-        User::create([
-            'phone' => session('mobile'),
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+    
+        // Check if the mobile number is provided in the request, otherwise fall back to the session.
+        $phone = $request->filled('phone') ? $validatedData['phone'] : session('mobile');
+        if (!$phone) {
+            return response()->json(['message' => 'Mobile number is required.'], 422);
+        }
+    
+        // Create the user
+        $user = User::create([
+            'phone' => $phone,
+            'email' => $validatedData['email'],
+            'password' => Hash::make($validatedData['password']),
         ]);
-
-        // Clear the session
-        session()->forget(['otp', 'phone']);
-
-        // TODO: Redirect to login or directly log in the user
+    
+        // Clear the session for the web app
+        session()->forget(['otp', 'mobile']);
+        Auth::login($user);
+        $token = $user->createToken('UserToken')->plainTextToken;
+        // Handle the response for the web app
+        if ($request->is('api/*')) {
+            // API response (for mobile app)
+            return response()->json(['message' => 'Registration successful.', 'token' => $token]);
+        } else {
+            // Web response (for web app)
+            return redirect()->intended('dashboard'); // Or wherever you want to redirect users after registration
+        }
     }
+    
 
 
 
