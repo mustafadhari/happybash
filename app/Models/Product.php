@@ -12,9 +12,9 @@ class Product extends Model
     protected $fillable = [
         'name',
         'description',
-        'price',
         'available_quantity',
         'subcategory_id',
+        'price_per_day',
     ];
 
     public function subcategory()
