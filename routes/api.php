@@ -13,6 +13,8 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\UserLocationController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
