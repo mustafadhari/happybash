@@ -184,7 +184,7 @@ class RegisterController extends Controller
         ]);
     
         // Check if the mobile number is provided in the request, otherwise fall back to the session.
-        $phone = $request->filled('phone') ? $validatedData['phone'] : session('mobile');
+        $phone = $request->filled('phone') ? $validatedData['phone'] : session('phone');
         if (!$phone) {
             return response()->json(['message' => 'Mobile number is required.'], 422);
         }
