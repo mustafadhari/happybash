@@ -69,8 +69,8 @@ Route::get('/login', function () {
 Route::get('index/{locale}', [HomeController::class, 'lang']);
 
 // Social login routes
-Route::get('/auth/{provider}', [SocialController::class, 'redirectToProvider'])->name('social.login');
-Route::get('/auth/{provider}/callback', [SocialController::class, 'handleProviderCallback']);
+// Route::get('/auth/{provider}', [SocialController::class, 'redirectToProvider'])->name('social.login');
+// Route::get('/auth/{provider}/callback', [SocialController::class, 'handleProviderCallback']);
 
 Auth::routes(['register' => false]);
 Route::middleware(['auth'])->group(function () {

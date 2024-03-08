@@ -15,6 +15,8 @@ use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\UserLocationController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\LabelTranslationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -71,5 +73,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/cart/item/{cartItem}', [CartController::class, 'removeCartItem']);
     Route::get('/cart', [CartController::class, 'viewCart']);
     Route::post('/cart/checkout', [CartController::class, 'checkout'])->middleware('auth:sanctum');
+    Route::post('/labels', [LabelTranslationController::class, 'insert']);
+    Route::get('/labels/{label_id}', [LabelTranslationController::class, 'get']);
 });
 
