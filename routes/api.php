@@ -16,6 +16,7 @@ use App\Http\Controllers\UserLocationController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LabelTranslationController;
+use App\Http\Controllers\UserController;
 
 
 /*
