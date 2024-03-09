@@ -58,4 +58,26 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('users.index');
     }
+
+    public function profile(Request $request)
+    {
+        return response()->json($request->user());
+    }
+
+    public function updateProfile(Request $request)
+    {
+        $user = $request->user(); // Get the authenticated user
+
+        // Validate the input
+        $validatedData = $request->validate([
+            'name' => 'sometimes|string|max:255',
+            'email' => 'sometimes|email|unique:users,email,' . $user->id,
+            'password' => 'sometimes|min:8',
+        ]);
+
+        // Update the user's profile
+        $user->update($validatedData);
+
+        return response()->json(['message' => 'Profile updated successfully', 'user' => $user]);
+    }
 }

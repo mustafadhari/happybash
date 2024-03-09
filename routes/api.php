@@ -48,6 +48,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/login', [LoginController::class, 'apiLogin']);
 Route::apiResource('locations', LocationController::class);
 Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user/profile', [UserController::class, 'profile']);
+    Route::patch('/user/profile', [UserController::class, 'updateProfile']);
     //Route::get('/locations', [LocationController::class, 'index']);
     Route::get('/user/location', [UserLocationController::class, 'show']);
     Route::put('/user/location', [UserLocationController::class, 'update']);
