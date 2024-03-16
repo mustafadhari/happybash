@@ -36,4 +36,9 @@ class Product extends Model
     public function isAvailableForDates($startDate, $endDate) {
         // Implement availability logic
     }
+
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
 }

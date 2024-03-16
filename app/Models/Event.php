@@ -27,5 +27,9 @@ class Event extends Model
         return $this->hasMany(Booking::class);
     }
 
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 
 }
