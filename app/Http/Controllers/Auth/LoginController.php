@@ -113,6 +113,8 @@ class LoginController extends Controller
             'phone' => 'nullable|string'
         ]);
 
+        // Check if the user is attempting to log in with email/password
+    if (isset($credentials['email']) && isset($credentials['password'])) {
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $token = $user->createToken('MobileAppAccess')->plainTextToken;
@@ -121,10 +123,23 @@ class LoginController extends Controller
                 'token' => $token
             ]);
         }
+    }
 
-        return response()->json([
-            'message' => 'The provided credentials are incorrect.'
-        ], 401);
+    // Check if the user is attempting to log in with phone number
+    if (isset($credentials['phone'])) {
+        $user = User::where('phone', $credentials['phone'])->first();
+        if ($user && Hash::check($request->password, $user->password)) {
+            $token = $user->createToken('MobileAppAccess')->plainTextToken;
+            return response()->json([
+                'message' => 'Login successful.',
+                'token' => $token
+            ]);
+        }
+    }
+
+    return response()->json([
+        'message' => 'The provided credentials are incorrect.'
+    ], 401);
     }
 
 
