@@ -108,9 +108,9 @@ class LoginController extends Controller
     public function apiLogin(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'email',
-            'password' => 'string',
-            'phone' => 'string'
+            'email' => 'nullable|email',
+            'password' => 'nullable|string',
+            'phone' => 'nullable|string'
         ]);
 
         if (Auth::attempt($credentials)) {
