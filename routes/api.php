@@ -46,6 +46,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // API route for login
+Route::post('/sendloginOTP', [LoginController::class, 'sendOTP']);
 Route::post('/login', [LoginController::class, 'apiLogin']);
 Route::apiResource('locations', LocationController::class);
 Route::middleware('auth:sanctum')->group(function () {

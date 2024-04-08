@@ -64,11 +64,49 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    // Method to handle OTP generation and sending
+    public function sendOTP(Request $request) {
+        $validatedData = $request->validate([
+            'country_code' => 'required',
+            'phone' => 'required',
+        ]);
+        //$countryCode = '+91';
+        $fullMobileNumber = $validatedData['country_code'] . $validatedData['phone'];
+        $otp = rand(1000, 9999); // Generate OTP
+        $this->sendTwilioOTP($fullMobileNumber, $otp);
+
+        session(['otp' => $otp, 'phone' => $fullMobileNumber]); // Store OTP and mobile in session
+        // Check if the request expects a JSON response
+        if ($request->expectsJson()) {
+            // Return a JSON response
+            return response()->json(['message' => 'OTP sent successfully']);
+        } else {
+            // Redirect to OTP verification view
+            return redirect()->route('verify');
+        }
+    }
+
+    protected function sendTwilioOTP($mobile, $otp) {
+        $sid = env('TWILIO_SID');
+        $token = env('TWILIO_AUTH_TOKEN');
+        $twilio_verify_sid = env('TWILIO_VERIFY_SID');
+
+        $twilio = new Client($sid, $token);
+
+        $twilio->verify->v2->services($twilio_verify_sid)
+            ->verifications
+            ->create($mobile, "sms", ["locale" => "en"]);
+            
+        // Store OTP in session for later verification
+        session(['otp' => $otp]);
+    }
+
     public function apiLogin(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|string',
+            'email' => 'email',
+            'password' => 'string',
+            'phone' => 'sting'
         ]);
 
         if (Auth::attempt($credentials)) {
