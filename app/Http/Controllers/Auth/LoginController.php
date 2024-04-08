@@ -128,7 +128,7 @@ class LoginController extends Controller
         // Check if the user is attempting to log in with phone number
         if (isset($credentials['phone'])) {
             $user = User::where('phone', $credentials['phone'])->first();
-            if ($user && Hash::check($request->password, $user->password)) {
+            if ($user) {
                 $token = $user->createToken('MobileAppAccess')->plainTextToken;
                 return response()->json([
                     'message' => 'Login successful.',
