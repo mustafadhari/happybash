@@ -110,7 +110,7 @@ class LoginController extends Controller
         $credentials = $request->validate([
             'email' => 'email',
             'password' => 'string',
-            'phone' => 'sting'
+            'phone' => 'string'
         ]);
 
         if (Auth::attempt($credentials)) {
