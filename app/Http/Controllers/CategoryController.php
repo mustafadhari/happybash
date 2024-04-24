@@ -18,7 +18,8 @@ class CategoryController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            // Other validations as necessary
+            'images' => 'sometimes|array',
+            'images.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $category = Category::create($validatedData);
