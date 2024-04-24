@@ -79,5 +79,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/cart/checkout', [CartController::class, 'checkout'])->middleware('auth:sanctum');
     Route::post('/labels', [LabelTranslationController::class, 'insert']);
     Route::get('/labels/{label_id}', [LabelTranslationController::class, 'get']);
+    Route::post('/category', [CategoryController::class, 'store']);
+    Route::put('/category/{category}', [CategoryController::class, 'update']);
+    Route::post('/subcategory', [SubcategoryController::class, 'store']);
+    Route::put('/subcategory/{subcategory}', [SubcategoryController::class, 'update']);
 });
 
