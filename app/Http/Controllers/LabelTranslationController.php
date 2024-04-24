@@ -1,7 +1,10 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use App\Models\LabelTranslation;
 use Illuminate\Http\Request;
+
 
 class LabelTranslationController extends Controller
 {
