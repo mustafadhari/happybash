@@ -67,7 +67,7 @@ class CategoryController extends Controller
                 $path = $image->store('category_images', 'public');
                 $url = Storage::disk('public')->url($path);
 
-                $category->images()->create(['image_url' => $url]);
+                $category->images()->update(['image_url' => $url]);
             }
         }
 
