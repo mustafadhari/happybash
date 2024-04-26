@@ -16,37 +16,23 @@
                                         <img src="{{ URL::asset('build/images/auth/img-1.png') }}" alt="" class="img-fluid">
                                     </div>
                                     <div class="col-lg-8 col-9">
-                                        <h1 class="text-white lh-base fw-lighter">Verify Your Mobile number</h1>
+                                        <h1 class="text-white lh-base fw-lighter">Verify Your Email</h1>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body text-center">
-                                <p class="text-muted fs-15"></p>
+                                @if (session('resent'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ __('A fresh verification link has been sent to your email address.') }}
+                                    </div>
+                                @endif
+                                <p class="text-muted fs-15">Please check your email and confirm it</p>
 
                                 <div class="p-2">
-                                    <form class="d-inline" method="POST" action="{{ route('verify-otp') }}">
+                                    <form class="d-inline" method="POST" action="">
                                         @csrf
-                                        <div class="row mb-3">
-                                            <label for="otp" class="col-md-4 col-form-label text-md-end">{{ __('Enter OTP') }}</label>
-
-                                            <div class="col-md-6">
-                                                <input id="otp" type="text" class="form-control @error('otp') is-invalid @enderror" name="otp" value="{{ old('otp') }}" required autocomplete="otp" autofocus>
-
-                                                @error('otp')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-0">
-                                            <div class="col-md-6 offset-md-4">
-                                                <button type="submit" class="btn btn-primary">
-                                                    Verify OTP
-                                                </button>
-                                            </div>
-                                        </div>
+                                        <button type="submit"
+                                            class="btn btn-primary w-100">{{ __('click here to request another') }}</button>
                                     </form><!-- end form -->
                                 </div>
                             </div>

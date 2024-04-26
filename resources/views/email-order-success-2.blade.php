@@ -14,7 +14,7 @@
             <div
                 style="padding: 1.5rem; display: flex;gap: 8px; align-items: center; justify-content: space-between;flex-wrap: wrap;">
                 <div>
-                    <a href="index"><img src="{{ URL::asset('images/logo-dark.png') }}" alt="" height="24"></a>
+                    <a href="index"><img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="85"></a>
                 </div>
                 <div style="display: flex;gap: 6px;">
                     <p style="margin-bottom: 0px; font-size: 14px;font-weight: 500;margin-top: 0px;"><span
@@ -44,7 +44,7 @@
                         <td style="padding: 12px 5px; vertical-align: top;width: 65px;">
                             <div
                                 style="border: 1px solid #eaeef4;height: 64px;width: 64px;display: flex; align-items: center;justify-content: center;border-radius: 6px;">
-                                <img src="{{ URL::asset('images/products/img-5.png') }}" alt="" height="38">
+                                <img src="{{ URL::asset('build/images/products/img-5.png') }}" alt="" height="38">
                             </div>
                         </td>
                         <td style="padding: 12px 5px; vertical-align: top;">
@@ -70,7 +70,7 @@
                         <td style="padding: 12px 5px; vertical-align: top;width: 65px;">
                             <div
                                 style="border: 1px solid #eaeef4;height: 64px;width: 64px;display: flex; align-items: center;justify-content: center;border-radius: 6px;">
-                                <img src="{{ URL::asset('images/products/img-6.png') }}" alt="" height="38">
+                                <img src="{{ URL::asset('build/images/products/img-6.png') }}" alt="" height="38">
                             </div>
                         </td>
                         <td style="padding: 12px 5px; vertical-align: top;">
@@ -96,7 +96,7 @@
                         <td style="padding: 12px 5px; vertical-align: top;width: 65px;">
                             <div
                                 style="border: 1px solid #eaeef4;height: 64px;width: 64px;display: flex; align-items: center;justify-content: center;border-radius: 6px;">
-                                <img src="{{ URL::asset('images/products/img-4.png') }}" alt="" height="38">
+                                <img src="{{ URL::asset('build/images/products/img-4.png') }}" alt="" height="38">
                             </div>
                         </td>
                         <td style="padding: 12px 5px; vertical-align: top;">
@@ -192,7 +192,7 @@
             <div
                 style="padding: 1.5rem; display: flex;gap: 8px; align-items: center; justify-content: space-between;flex-wrap: wrap;">
                 <div>
-                    <a href="index"><img src="{{ URL::asset('images/logo-light.png') }}" alt="" height="24"></a>
+                    <a href="index"><img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="84"></a>
                 </div>
                 <div style="display: flex;gap: 6px;">
                     <p style="margin-bottom: 0px; font-size: 14px;font-weight: 500;margin-top: 0px;"><span
@@ -257,7 +257,7 @@
                         <td style="padding: 12px 5px; vertical-align: top;width: 65px;">
                             <div
                                 style="border: 1px solid #ffffff14;height: 64px;width: 64px;display: flex; align-items: center;justify-content: center;border-radius: 6px;">
-                                <img src="{{ URL::asset('images/products/img-5.png') }}" alt="" height="38">
+                                <img src="{{ URL::asset('build/images/products/img-5.png') }}" alt="" height="38">
                             </div>
                         </td>
                         <td style="padding: 12px 5px; vertical-align: top;">
@@ -286,7 +286,7 @@
                         <td style="padding: 12px 5px; vertical-align: top;width: 65px;">
                             <div
                                 style="border: 1px solid #ffffff14;height: 64px;width: 64px;display: flex; align-items: center;justify-content: center;border-radius: 6px;">
-                                <img src="{{ URL::asset('images/products/img-6.png') }}" alt="" height="38">
+                                <img src="{{ URL::asset('build/images/products/img-6.png') }}" alt="" height="38">
                             </div>
                         </td>
                         <td style="padding: 12px 5px; vertical-align: top;">
@@ -315,7 +315,7 @@
                         <td style="padding: 12px 5px; vertical-align: top;width: 65px;">
                             <div
                                 style="border: 1px solid #ffffff14;height: 64px;width: 64px;display: flex; align-items: center;justify-content: center;border-radius: 6px;">
-                                <img src="{{ URL::asset('images/products/img-4.png') }}" alt="" height="38">
+                                <img src="{{ URL::asset('build/images/products/img-4.png') }}" alt="" height="38">
                             </div>
                         </td>
                         <td style="padding: 12px 5px; vertical-align: top;">

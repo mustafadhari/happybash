@@ -5,7 +5,7 @@
 @section('css')
     <!-- extra css -->
     <!--Swiper slider css-->
-    <link href="{{ URL::asset('libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ URL::asset('build/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('content')
     <section class="trend-fashion-home">
@@ -13,7 +13,7 @@
             <div class="row g-0">
                 <div class="col-lg-4">
                     <div class="home-widgets card card-height-100 border-0 rounded-end-0"
-                        style="background-image: url('images/fashion/img-3.png');background-size: cover;">
+                        style="background-image: url('build/images/fashion/img-3.png');background-size: cover;">
                         <div class="card-body"></div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <!--end col-->
                 <div class="col-lg-4">
                     <div class="card home-widgets card-height-100 border-0 rounded-start-0"
-                        style="background-image: url('images/fashion/img-5.png');background-size: cover;">
+                        style="background-image: url('build/images/fashion/img-5.png');background-size: cover;">
                         <div class="card-body"></div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-lg-5">
                     <div class="category-widgets-main card card-height-100 border-0 shadow-none bg-light btn-6">
                         <div class="effect h-100">
-                            <img src="{{ URL::asset('images/fashion/img-02.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/fashion/img-02.png') }}" alt=""
                                 class="img-fluid h-100 object-fit-cover">
                             <div class="widgets-wrapper position-absolute text-center">
                                 <a href="#!" class="btn btn-dark w-md rounded-0 stretched-link">Woman Fashion</a>
@@ -78,7 +78,7 @@
                         <div class="col-lg-6">
                             <div class="category-widgets-main card border-0 shadow-none bg-light">
                                 <div class="effect">
-                                    <img src="{{ URL::asset('images/fashion/product/img-02.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/fashion/product/img-02.png') }}" alt="" class="img-fluid">
                                     <div class="widgets-wrapper position-absolute text-center">
                                         <a href="#!" class="btn btn-dark w-md rounded-0 stretched-link">Man's</a>
                                     </div>
@@ -89,7 +89,7 @@
                         <div class="col-lg-6">
                             <div class="category-widgets-main card border-0 shadow-none bg-light">
                                 <div class="effect">
-                                    <img src="{{ URL::asset('images/fashion/product/img-03.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/fashion/product/img-03.png') }}" alt="" class="img-fluid">
                                     <div class="widgets-wrapper position-absolute text-center">
                                         <a href="#!" class="btn btn-dark w-md rounded-0 stretched-link">Accessories</a>
                                     </div>
@@ -100,7 +100,7 @@
                         <div class="col-lg-6">
                             <div class="category-widgets-main card border-0 shadow-none bg-light">
                                 <div class="effect">
-                                    <img src="{{ URL::asset('images/fashion/product/img-12.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/fashion/product/img-12.png') }}" alt="" class="img-fluid">
                                     <div class="widgets-wrapper position-absolute text-center">
                                         <a href="#!" class="btn btn-dark w-md rounded-0 stretched-link">Jacket &
                                             Sweater</a>
@@ -112,7 +112,7 @@
                         <div class="col-lg-6">
                             <div class="category-widgets-main card border-0 shadow-none bg-light">
                                 <div class="effect">
-                                    <img src="{{ URL::asset('images/fashion/product/img-01.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/fashion/product/img-01.png') }}" alt="" class="img-fluid">
                                     <div class="widgets-wrapper position-absolute text-center">
                                         <a href="#!" class="btn btn-dark w-md rounded-0 stretched-link">Tops</a>
                                     </div>
@@ -151,9 +151,9 @@
                                 <div class="card product-widget border-0 card-animate">
                                     <div class="card-body p-2">
                                         <div class="position-relative p-4 bg-light">
-                                            <img src="{{ URL::asset('images/fashion/product/img-15.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-15.png') }}" alt=""
                                                 class="img-fluid product-img-main">
-                                            <img src="{{ URL::asset('images/fashion/product/img-14.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-14.png') }}" alt=""
                                                 class="img-fluid product-img-2">
                                             <ul class="product-menu list-unstyled">
                                                 <li class="mb-2">
@@ -246,9 +246,9 @@
                                 <div class="card product-widget border-0 card-animate">
                                     <div class="card-body p-2">
                                         <div class="position-relative p-4 bg-light">
-                                            <img src="{{ URL::asset('images/fashion/product/img-13.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-13.png') }}" alt=""
                                                 class="img-fluid product-img-main">
-                                            <img src="{{ URL::asset('images/fashion/product/img-11.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-11.png') }}" alt=""
                                                 class="img-fluid product-img-2">
                                             <ul class="product-menu list-unstyled">
                                                 <li class="mb-2">
@@ -325,9 +325,9 @@
                                 <div class="card product-widget border-0 card-animate">
                                     <div class="card-body p-2">
                                         <div class="position-relative p-4 bg-light">
-                                            <img src="{{ URL::asset('images/fashion/product/img-02.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-02.png') }}" alt=""
                                                 class="img-fluid product-img-main">
-                                            <img src="{{ URL::asset('images/fashion/product/img-09.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-09.png') }}" alt=""
                                                 class="img-fluid product-img-2">
                                             <ul class="product-menu list-unstyled">
                                                 <li class="mb-2">
@@ -384,9 +384,9 @@
                                 <div class="card product-widget border-0 card-animate">
                                     <div class="card-body p-2">
                                         <div class="position-relative p-4 bg-light">
-                                            <img src="{{ URL::asset('images/fashion/product/img-09.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-09.png') }}" alt=""
                                                 class="img-fluid product-img-main">
-                                            <img src="{{ URL::asset('images/fashion/product/img-02.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-02.png') }}" alt=""
                                                 class="img-fluid product-img-2">
                                             <ul class="product-menu list-unstyled">
                                                 <li class="mb-2">
@@ -479,9 +479,9 @@
                                 <div class="card product-widget border-0 card-animate">
                                     <div class="card-body p-2">
                                         <div class="position-relative p-4 bg-light">
-                                            <img src="{{ URL::asset('images/fashion/product/img-11.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-11.png') }}" alt=""
                                                 class="img-fluid product-img-main">
-                                            <img src="{{ URL::asset('images/fashion/product/img-04.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-04.png') }}" alt=""
                                                 class="img-fluid product-img-2">
                                             <ul class="product-menu list-unstyled">
                                                 <li class="mb-2">
@@ -572,9 +572,9 @@
                                 <div class="card product-widget border-0 card-animate">
                                     <div class="card-body p-2">
                                         <div class="position-relative p-4 bg-light">
-                                            <img src="{{ URL::asset('images/fashion/product/img-08.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-08.png') }}" alt=""
                                                 class="img-fluid product-img-main">
-                                            <img src="{{ URL::asset('images/fashion/product/img-10.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/fashion/product/img-10.png') }}" alt=""
                                                 class="img-fluid product-img-2">
                                             <ul class="product-menu list-unstyled">
                                                 <li class="mb-2">
@@ -695,7 +695,7 @@
                 </div>
                 <!--end col-->
                 <div class="col-lg-5 ms-auto">
-                    <img src="{{ URL::asset('images/fashion/img-4.png') }}" alt="" class="img-fluid">
+                    <img src="{{ URL::asset('build/images/fashion/img-4.png') }}" alt="" class="img-fluid">
                 </div>
                 <!--end col-->
             </div>
@@ -723,9 +723,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-02.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-02.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-17.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-17.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -779,9 +779,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-05.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-05.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-01.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-01.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -830,9 +830,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/products/img-6.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/products/img-6.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-03.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-03.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -880,9 +880,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/products/img-19.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/products/img-19.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-11.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-11.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -922,9 +922,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-08.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-08.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-18.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-18.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -971,9 +971,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-12.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-12.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-09.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-09.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1021,9 +1021,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-11.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-11.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-13.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-13.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1077,9 +1077,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-13.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-13.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-11.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-11.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1128,9 +1128,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-15.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-15.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-14.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-14.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1179,9 +1179,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-01.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-01.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-09.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-09.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1228,9 +1228,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-05.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-05.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-01.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-01.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1278,9 +1278,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-06.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-06.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-03.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-03.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1328,9 +1328,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-07.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-07.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-04.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-04.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1370,9 +1370,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-01.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-01.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-03.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-03.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1420,9 +1420,9 @@
                     <div class="card product-widget border-0 card-animate">
                         <div class="card-body p-2">
                             <div class="position-relative p-4 bg-light">
-                                <img src="{{ URL::asset('images/fashion/product/img-02.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-02.png') }}" alt=""
                                     class="img-fluid product-img-main">
-                                <img src="{{ URL::asset('images/fashion/product/img-01.png') }}" alt=""
+                                <img src="{{ URL::asset('build/images/fashion/product/img-01.png') }}" alt=""
                                     class="img-fluid product-img-2">
                                 <ul class="product-menu list-unstyled">
                                     <li class="mb-2">
@@ -1578,7 +1578,7 @@
             <div class="card border-0 overflow-hidden">
                 <div class="row g-0">
                     <div class="col-lg-5">
-                        <img src="{{ URL::asset('images/fashion/cta.png') }}" alt=""
+                        <img src="{{ URL::asset('build/images/fashion/cta.png') }}" alt=""
                             class="img-fluid h-100 object-fit-cover">
                     </div>
                     <!--end col-->
@@ -1635,7 +1635,7 @@
                             data-bs-content="One or two brand names can look classy, but too many can detract from the sophistication you're going for.">
                             <i class="ph-plus-bold"></i>
                         </a>
-                        <img src="{{ URL::asset('images/instgram/img-01.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ URL::asset('build/images/instgram/img-01.jpg') }}" alt="" class="img-fluid rounded">
                     </div>
                 </div>
                 <!--end col-->
@@ -1647,7 +1647,7 @@
                             data-bs-content="A capsule collection is essentially a condensed version of a designer's vision">
                             <i class="ph-plus-bold"></i>
                         </a>
-                        <img src="{{ URL::asset('images/instgram/img-02.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ URL::asset('build/images/instgram/img-02.jpg') }}" alt="" class="img-fluid rounded">
                     </div>
                 </div>
                 <!--end col-->
@@ -1659,7 +1659,7 @@
                             data-bs-content="Yours may consist of traditional pieces, such as tops, bottoms, and outerwear, or focus on a single product">
                             <i class="ph-plus-bold"></i>
                         </a>
-                        <img src="{{ URL::asset('images/instgram/img-03.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ URL::asset('build/images/instgram/img-03.jpg') }}" alt="" class="img-fluid rounded">
                     </div>
                 </div>
                 <!--end col-->
@@ -1671,7 +1671,7 @@
                             data-bs-content="Typical sport-specific garments include tracksuits, shorts, T-shirts and polo shirts.">
                             <i class="ph-plus-bold"></i>
                         </a>
-                        <img src="{{ URL::asset('images/instgram/img-04.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ URL::asset('build/images/instgram/img-04.jpg') }}" alt="" class="img-fluid rounded">
                     </div>
                 </div>
                 <!--end col-->
@@ -1683,7 +1683,7 @@
                             data-bs-content="One or two brand names can look classy, but too many can detract from the sophistication you're going for.">
                             <i class="ph-plus-bold"></i>
                         </a>
-                        <img src="{{ URL::asset('images/instgram/img-05.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ URL::asset('build/images/instgram/img-05.jpg') }}" alt="" class="img-fluid rounded">
                     </div>
                 </div>
                 <!--end col-->
@@ -1695,7 +1695,7 @@
                             data-bs-content="Footwear refers to garments worn on the feet, which typically serves the purpose of protection against adversities.">
                             <i class="ph-plus-bold"></i>
                         </a>
-                        <img src="{{ URL::asset('images/instgram/img-06.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ URL::asset('build/images/instgram/img-06.jpg') }}" alt="" class="img-fluid rounded">
                     </div>
                 </div>
                 <!--end col-->
@@ -1707,11 +1707,11 @@
 @endsection
 @section('scripts')
     <!-- Swiper Js-->
-    <script src="{{ URL::asset('libs/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/swiper/swiper-bundle.min.js') }}"></script>
 
     <!-- Main Dem init js-->
-    <script src="{{ URL::asset('js/frontend/trend-fashion.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/trend-fashion.init.js') }}"></script>
 
     <!-- menu init js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

@@ -54,7 +54,7 @@
                                             <div class="d-flex gap-3">
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <div class="avatar-title bg-light rounded">
-                                                        <img src="{{ URL::asset('images/products/img-19.png') }}" alt=""
+                                                        <img src="{{ URL::asset('build/images/products/img-19.png') }}" alt=""
                                                             class="avatar-xs">
                                                     </div>
                                                 </div>
@@ -84,7 +84,7 @@
                                             <div class="d-flex gap-3">
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <div class="avatar-title bg-danger-subtle rounded">
-                                                        <img src="{{ URL::asset('images/products/img-12.png') }}" alt=""
+                                                        <img src="{{ URL::asset('build/images/products/img-12.png') }}" alt=""
                                                             class="avatar-xs">
                                                     </div>
                                                 </div>
@@ -116,7 +116,7 @@
                                             <div class="d-flex gap-3">
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <div class="avatar-title bg-success-subtle rounded">
-                                                        <img src="{{ URL::asset('images/products/img-4.png') }}" alt=""
+                                                        <img src="{{ URL::asset('build/images/products/img-4.png') }}" alt=""
                                                             class="avatar-xs">
                                                     </div>
                                                 </div>
@@ -146,7 +146,7 @@
                                             <div class="d-flex gap-3">
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <div class="avatar-title bg-secondary-subtle rounded">
-                                                        <img src="{{ URL::asset('images/products/img-1.png') }}" alt=""
+                                                        <img src="{{ URL::asset('build/images/products/img-1.png') }}" alt=""
                                                             class="avatar-xs">
                                                     </div>
                                                 </div>
@@ -178,7 +178,7 @@
                                             <div class="d-flex gap-3">
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <div class="avatar-title bg-info-subtle rounded">
-                                                        <img src="{{ URL::asset('images/products/img-7.png') }}" alt=""
+                                                        <img src="{{ URL::asset('build/images/products/img-7.png') }}" alt=""
                                                             class="avatar-xs">
                                                     </div>
                                                 </div>
@@ -219,7 +219,7 @@
     </section>
 
     <section class="section bg-light bg-opacity-25"
-        style="background-image: url('images/ecommerce/bg-effect.png');background-position: center; background-size: cover;">
+        style="background-image: url('build/images/ecommerce/bg-effect.png');background-position: center; background-size: cover;">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6">
@@ -241,7 +241,7 @@
                 <!--end col-->
                 <div class="col-lg-4">
                     <div class="mt-4 mt-lg-0">
-                        <img src="{{ URL::asset('images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
+                        <img src="{{ URL::asset('build/images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
                     </div>
                 </div>
                 <!--end col-->
@@ -257,7 +257,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -269,7 +269,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">2 Days Return Policy</h5>
@@ -281,7 +281,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt=""
                                 class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
@@ -294,7 +294,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">24 X 7 Service</h5>
@@ -325,10 +325,10 @@
                                 <div class="card-header border-bottom-dashed p-4">
                                     <div class="d-sm-flex">
                                         <div class="flex-grow-1">
-                                            <img src="{{ URL::asset('images/logo-dark.png') }}" class="card-logo card-logo-dark"
-                                                alt="logo dark" height="26">
-                                            <img src="{{ URL::asset('images/logo-light.png') }}" class="card-logo card-logo-light"
-                                                alt="logo light" height="26">
+                                            <img src="{{ URL::asset('build/images/hb-logo.png') }}" class="card-logo card-logo-dark"
+                                                alt="logo dark" height="86">
+                                            <img src="{{ URL::asset('build/images/hb-logo.png') }}" class="card-logo card-logo-light"
+                                                alt="logo light" height="86">
                                             <div class="mt-sm-5 mt-4">
                                                 <h6 class="text-muted text-uppercase fw-semibold fs-14">Address</h6>
                                                 <p class="text-muted mb-1" id="address-details">Phoenix, USA</p>
@@ -546,5 +546,5 @@
 @endsection
 @section('scripts')
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

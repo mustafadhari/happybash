@@ -15,7 +15,7 @@
                             <div class="card-header bg-primary border-0">
                                 <div class="row">
                                     <div class="col-lg-4 col-3">
-                                        <img src="{{ URL::asset('images/auth/img-1.png') }}" alt="" class="img-fluid">
+                                        <img src="{{ URL::asset('build/images/auth/img-1.png') }}" alt="" class="img-fluid">
                                     </div>
                                     <div class="col-lg-8 col-9">
                                         <h1 class="text-white lh-base fw-lighter">Create New Password</h1>
@@ -114,5 +114,5 @@
 @endsection
 @section('scripts')
     <!-- password-addon init -->
-    <script src="{{ URL::asset('js/pages/passowrd-create.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/pages/passowrd-create.init.js') }}"></script>
 @endsection

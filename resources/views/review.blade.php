@@ -34,7 +34,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-10.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-10.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Scott Barber</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -52,7 +52,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-8.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-8.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Daniel Owen</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -70,7 +70,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-2.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Patrick Kelly</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -88,7 +88,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-1.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Victoria Le</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -106,7 +106,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-4.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-4.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Daniel Mejia</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -125,7 +125,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-3.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-3.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Nicole Davis</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -144,7 +144,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-5.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-5.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Jessica Thomas</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -163,7 +163,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-6.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-6.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Elizabeth Padilla</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -180,7 +180,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ URL::asset('images/users/avatar-7.jpg') }}" alt="" class="avatar-sm rounded">
+                            <img src="{{ URL::asset('build/images/users/avatar-7.jpg') }}" alt="" class="avatar-sm rounded">
                             <h5 class="mb-2 mt-3">Alexis Davidson</h5>
                             <div class="text-warning mb-3">
                                 <i class="ri-star-s-fill"></i>
@@ -201,7 +201,7 @@
     </section>
 
     <section class="section"
-        style="background-image: url('images/profile-bg.jpg'); background-size: cover;background-position: center;">
+        style="background-image: url('build/images/profile-bg.jpg'); background-size: cover;background-position: center;">
         <div class="bg-overlay bg-secondary" style="opacity: 0.85;"></div>
         <div class="container">
             <div class="row">
@@ -223,8 +223,8 @@
 @endsection
 @section('scripts')
     <!-- Masonry plugin -->
-    <script src="{{ URL::asset('libs/masonry-layout/masonry.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/masonry-layout/masonry.pkgd.min.js') }}"></script>
 
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

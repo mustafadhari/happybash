@@ -161,7 +161,7 @@
                             </symbol>
                         </svg>
                     </div>
-                    <div style="position: relative; padding:24px;background-image: url('images/ecommerce/img-2.jpg');background-size: cover;background-position: center; border-radius: 8px;">
+                    <div style="position: relative; padding:24px;background-image: url('build/images/ecommerce/img-2.jpg');background-size: cover;background-position: center; border-radius: 8px;">
                         <div style="position:absolute; top:0; bottom:0; left:0; right:0; background-color: rgba(255, 255, 255, .75); border-radius: 8px;"></div>
                         <div style="position: relative">
                             <div style="text-align: center;">
@@ -342,7 +342,7 @@
                             </symbol>
                         </svg>
                     </div>
-                    <div style="position: relative; padding:24px;background-image: url('images/ecommerce/img-2.jpg');background-size: cover;background-position: center; border-radius: 8px;">
+                    <div style="position: relative; padding:24px;background-image: url('build/images/ecommerce/img-2.jpg');background-size: cover;background-position: center; border-radius: 8px;">
                         <div style="position:absolute; top:0; bottom:0; left:0; right:0; background-color: rgba(67, 142, 255, .7); border-radius: 8px;"></div>
                         <div style="position: relative">
                             <div style="text-align: center;">

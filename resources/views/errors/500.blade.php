@@ -15,7 +15,7 @@
                             <div class="card-body text-center p-4">
 
                                 <div class="text-center px-sm-5 mx-5">
-                                    <img src="{{ URL::asset('images/error500.png') }}" class="img-fluid" alt="">
+                                    <img src="{{ URL::asset('build/images/error500.png') }}" class="img-fluid" alt="">
                                 </div>
                                 <div class="mt-4 text-center pt-3">
                                     <div class="position-relative">

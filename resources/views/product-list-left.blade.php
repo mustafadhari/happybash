@@ -5,11 +5,11 @@
 @section('css')
     <!-- extra css -->
     <!-- nouisliderribute css -->
-    <link rel="stylesheet" href="{{ URL::asset('libs/nouislider/nouislider.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('build/libs/nouislider/nouislider.min.css') }}">
 @endsection
 @section('content')
     <section class="ecommerce-about"
-        style="background-image: url('images/profile-bg.jpg'); background-size: cover;background-position: center;">
+        style="background-image: url('build/images/profile-bg.jpg'); background-size: cover;background-position: center;">
         <div class="bg-overlay bg-primary" style="opacity: 0.85;"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -540,7 +540,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-12.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-12.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action"
@@ -583,7 +583,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-7.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-7.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action "
@@ -619,7 +619,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-3.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-3.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action "
@@ -660,7 +660,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-2.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-2.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action "
@@ -696,7 +696,7 @@
     </section>
 
     <section class="section bg-light bg-opacity-25"
-        style="background-image: url('images/ecommerce/bg-effect.png');background-position: center; background-size: cover;">
+        style="background-image: url('build/images/ecommerce/bg-effect.png');background-position: center; background-size: cover;">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6">
@@ -718,7 +718,7 @@
                 <!--end col-->
                 <div class="col-lg-4">
                     <div class="mt-5 mt-lg-0">
-                        <img src="{{ URL::asset('images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
+                        <img src="{{ URL::asset('build/images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
                     </div>
                 </div>
                 <!--end col-->
@@ -734,7 +734,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -746,7 +746,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">2 Days Return Policy</h5>
@@ -758,7 +758,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt=""
                                 class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
@@ -771,7 +771,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">24 X 7 Service</h5>
@@ -788,12 +788,12 @@
 @endsection
 @section('scripts')
     <!-- nouisliderribute js -->
-    <script src="{{ URL::asset('libs/nouislider/nouislider.min.js') }}"></script>
-    <script src="{{ URL::asset('libs/wnumb/wNumb.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/nouislider/nouislider.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/wnumb/wNumb.min.js') }}"></script>
 
     <!-- Product-list init js -->
-    <script src="{{ URL::asset('js/frontend/product-list.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/product-list.init.js') }}"></script>
 
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

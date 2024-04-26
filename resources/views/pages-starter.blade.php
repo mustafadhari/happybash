@@ -12,5 +12,5 @@
 @endsection
 @section('scripts')
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

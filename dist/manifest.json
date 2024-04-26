@@ -1,0 +1,52 @@
+{
+  "resources/images/flags/us.svg": {
+    "file": "assets/us-de148770.svg",
+    "src": "resources/images/flags/us.svg"
+  },
+  "resources/images/sidebar/body-light-1.png": {
+    "file": "assets/body-light-1-99a76dc2.png",
+    "src": "resources/images/sidebar/body-light-1.png"
+  },
+  "resources/images/sidebar/body-light-2.png": {
+    "file": "assets/body-light-2-aaeae795.png",
+    "src": "resources/images/sidebar/body-light-2.png"
+  },
+  "resources/images/sidebar/body-light-3.png": {
+    "file": "assets/body-light-3-c80e8739.png",
+    "src": "resources/images/sidebar/body-light-3.png"
+  },
+  "resources/images/sidebar/img-1.jpg": {
+    "file": "assets/img-1-3b9dce64.jpg",
+    "src": "resources/images/sidebar/img-1.jpg"
+  },
+  "resources/images/sidebar/img-2.jpg": {
+    "file": "assets/img-2-d16be264.jpg",
+    "src": "resources/images/sidebar/img-2.jpg"
+  },
+  "resources/images/sidebar/img-3.jpg": {
+    "file": "assets/img-3-85ebe1f9.jpg",
+    "src": "resources/images/sidebar/img-3.jpg"
+  },
+  "resources/images/sidebar/img-4.jpg": {
+    "file": "assets/img-4-818d3823.jpg",
+    "src": "resources/images/sidebar/img-4.jpg"
+  },
+  "resources/images/watch/cta.jpg": {
+    "file": "assets/cta-9122eba6.jpg",
+    "src": "resources/images/watch/cta.jpg"
+  },
+  "resources/images/watch/home.jpg": {
+    "file": "assets/home-10f14add.jpg",
+    "src": "resources/images/watch/home.jpg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-25674b89.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-1348d164.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  }
+}

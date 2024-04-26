@@ -4,11 +4,11 @@
 @endsection
 @section('css')
     <!-- extra css -->
-    <link href="{{ URL::asset('libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ URL::asset('build/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
     <section class="ecommerce-about"
-        style="background-image: url('images/profile-bg.jpg'); background-size: cover;background-position: center;">
+        style="background-image: url('build/images/profile-bg.jpg'); background-size: cover;background-position: center;">
         <div class="bg-overlay bg-primary" style="opacity: 0.85;"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -40,31 +40,31 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="product-thumb rounded cursor-pointer">
-                                            <img src="{{ URL::asset('images/products/img-31.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-31.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-thumb rounded cursor-pointer">
-                                            <img src="{{ URL::asset('images/products/img-33.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-33.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-thumb rounded cursor-pointer">
-                                            <img src="{{ URL::asset('images/products/img-32.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-32.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-thumb rounded cursor-pointer">
-                                            <img src="{{ URL::asset('images/products/img-34.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-34.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-thumb rounded cursor-pointer">
-                                            <img src="{{ URL::asset('images/products/img-34.png') }}" class="img-fluid" />
+                                            <img src="{{ URL::asset('build/images/products/img-34.png') }}" class="img-fluid" />
                                         </div>
                                     </div>
                                 </div>
@@ -80,23 +80,23 @@
                                 <div class="swiper productSwiper2">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide ">
-                                            <img src="{{ URL::asset('images/products/img-31.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-31.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="{{ URL::asset('images/products/img-33.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-33.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="{{ URL::asset('images/products/img-32.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-32.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="{{ URL::asset('images/products/img-34.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-34.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="{{ URL::asset('images/products/img-34.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-34.png') }}" alt=""
                                                 class="img-fluid" />
                                         </div>
                                     </div>
@@ -472,7 +472,7 @@
                                     <div class="d-flex p-3 border-bottom border-bottom-dashed">
                                         <div class="flex-shrink-0 me-3">
                                             <img class="avatar-xs rounded-circle"
-                                                src="{{ URL::asset('images/users/avatar-5.jpg') }}" alt="">
+                                                src="{{ URL::asset('build/images/users/avatar-5.jpg') }}" alt="">
                                         </div>
                                         <div class="flex-grow-1">
                                             <div class="d-flex mb-3">
@@ -510,7 +510,7 @@
                                             <div class="d-flex mt-4">
                                                 <div class="flex-shrink-0 me-3">
                                                     <img class="avatar-xs rounded-circle"
-                                                        src="{{ URL::asset('images/users/avatar-1.jpg') }}" alt="">
+                                                        src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt="">
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <div class="d-flex mb-3">
@@ -536,7 +536,7 @@
                                     <div class="d-flex p-3 border-bottom border-bottom-dashed">
                                         <div class="flex-shrink-0 me-3">
                                             <img class="avatar-xs rounded-circle"
-                                                src="{{ URL::asset('images/users/avatar-3.jpg') }}" alt="">
+                                                src="{{ URL::asset('build/images/users/avatar-3.jpg') }}" alt="">
                                         </div>
                                         <div class="flex-grow-1">
                                             <div class="d-flex mb-3">
@@ -577,7 +577,7 @@
                                     <div class="d-flex p-3 border-bottom border-bottom-dashed mb-3">
                                         <div class="flex-shrink-0 me-3">
                                             <img class="avatar-xs rounded-circle"
-                                                src="{{ URL::asset('images/users/avatar-8.jpg') }}" alt="">
+                                                src="{{ URL::asset('build/images/users/avatar-8.jpg') }}" alt="">
                                         </div>
                                         <div class="flex-grow-1">
                                             <div class="d-flex mb-3">
@@ -615,7 +615,7 @@
                                             <div class="d-flex mt-4">
                                                 <div class="flex-shrink-0 me-3">
                                                     <img class="avatar-xs rounded-circle"
-                                                        src="{{ URL::asset('images/users/avatar-1.jpg') }}" alt="">
+                                                        src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt="">
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <div class="d-flex mb-3">
@@ -697,7 +697,7 @@
                     <a href="product-grid-right" class="card mb-3 card-animate stretched-link">
                         <div class="row g-0">
                             <div class="col-sm-4">
-                                <img src="{{ URL::asset('images/ecommerce/img-5.jpg') }}"
+                                <img src="{{ URL::asset('build/images/ecommerce/img-5.jpg') }}"
                                     class="img-fluid rounded-start h-100 object-fit-cover" alt="...">
                             </div>
                             <div class="col-sm-8">
@@ -718,7 +718,7 @@
                     <a href="product-grid-right" class="card mb-3 card-animate stretched-link">
                         <div class="row g-0">
                             <div class="col-sm-4">
-                                <img src="{{ URL::asset('images/ecommerce/img-2.jpg') }}"
+                                <img src="{{ URL::asset('build/images/ecommerce/img-2.jpg') }}"
                                     class="img-fluid rounded-start h-100 object-fit-cover" alt="...">
                             </div>
                             <div class="col-sm-8">
@@ -738,7 +738,7 @@
                     <a href="product-grid-right" class="card mb-3 card-animate stretched-link">
                         <div class="row g-0">
                             <div class="col-sm-4">
-                                <img src="{{ URL::asset('images/ecommerce/img-3.jpg') }}"
+                                <img src="{{ URL::asset('build/images/ecommerce/img-3.jpg') }}"
                                     class="img-fluid rounded-start h-100 object-fit-cover" alt="...">
                             </div>
                             <div class="col-sm-8">
@@ -781,7 +781,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-12.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-12.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action"
@@ -825,7 +825,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-7.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-7.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action "
@@ -862,7 +862,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-3.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-3.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action "
@@ -903,7 +903,7 @@
                     <div
                         class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
                         <div class="bg-light bg-opacity-50 rounded py-4 position-relative">
-                            <img src="{{ URL::asset('images/products/img-2.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/products/img-2.png') }}" alt=""
                                 style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                             <div class="action vstack gap-2">
                                 <button class="btn btn-danger avatar-xs p-0 btn-soft-warning custom-toggle product-action "
@@ -942,7 +942,7 @@
     </section>
 
     <section class="section bg-light bg-opacity-25"
-        style="background-image: url('images/ecommerce/bg-effect.png');background-position: center; background-size: cover;">
+        style="background-image: url('build/images/ecommerce/bg-effect.png');background-position: center; background-size: cover;">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6">
@@ -964,7 +964,7 @@
                 <!--end col-->
                 <div class="col-lg-4">
                     <div>
-                        <img src="{{ URL::asset('images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
+                        <img src="{{ URL::asset('build/images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
                     </div>
                 </div>
                 <!--end col-->
@@ -980,7 +980,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -992,7 +992,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">2 Days Return Policy</h5>
@@ -1004,7 +1004,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt=""
                                 class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
@@ -1017,7 +1017,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">24 X 7 Service</h5>
@@ -1034,10 +1034,10 @@
 @endsection
 @section('scripts')
     <!--Swiper slider js-->
-    <script src="{{ URL::asset('libs/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/swiper/swiper-bundle.min.js') }}"></script>
 
-    <script src="{{ URL::asset('js/frontend/product-details.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/product-details.init.js') }}"></script>
 
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

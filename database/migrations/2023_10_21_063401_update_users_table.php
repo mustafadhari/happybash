@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('role')->after('email'); // Add a 'role' column after 'email'
             $table->string('phone')->nullable()->after('role'); // Add a nullable 'phone' column after 'role'
             $table->string('address')->after('phone'); // Add a 'address' column after 'phone'
-            $table->string('avatar')->after('address'); // Add a 'address' column after 'phone'
+            //$table->string('avatar')->after('address'); // Add a 'address' column after 'phone'
         });
     }
 

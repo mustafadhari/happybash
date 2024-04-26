@@ -2,10 +2,10 @@
     <div class="container-fluid container-custom">
         <a class="navbar-brand d-none d-lg-block" href="index">
             <div class="logo-dark">
-                <img src="{{ URL::asset('images/logo-dark.png') }}" alt="" height="25">
+                <img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="85">
             </div>
             <div class="logo-light">
-                <img src="{{ URL::asset('images/logo-light.png') }}" alt="" height="25">
+                <img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="85">
             </div>
         </a>
         <button class="btn btn-soft-primary btn-icon d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,8 +15,8 @@
             <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0" id="navigation-menu">
                  <li class="nav-item d-block d-lg-none">
                     <a class="d-block p-3 h-auto text-center" href="index.html">
-                        <img src="{{ URL::asset('images/logo-dark.png') }}" alt="" height="25" class="card-logo-dark mx-auto">
-                        <img src="{{ URL::asset('images/logo-light.png') }}" alt="" height="25" class="card-logo-light mx-auto">
+                        <img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="85" class="card-logo-dark mx-auto">
+                        <img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="85" class="card-logo-light mx-auto">
                     </a>
                 </li>
                 <li class="nav-item dropdown dropdown-hover">
@@ -45,7 +45,7 @@
                     <div class="dropdown-menu p-0">
                         <div class="row g-0 g-lg-4">
                             <div class="col-lg-2 d-none d-lg-block">
-                                <div class="card rounded-start rounded-0 border-0 h-100 mb-0 overflow-hidden" style="background-image: url('images/ecommerce/img-1.jpg');background-size: cover;">
+                                <div class="card rounded-start rounded-0 border-0 h-100 mb-0 overflow-hidden" style="background-image: url('build/images/ecommerce/img-1.jpg');background-size: cover;">
                                     <div class="bg-overlay bg-light bg-opacity-25"></div>
                                     <div class="card-body d-flex align-items-center justify-content-center">
                                         <div class="text-center">
@@ -148,32 +148,32 @@
                                     <div class="row g-2">
                                         <div class="col-lg-4">
                                             <a href="#!" class="d-block p-2 border border-dashed text-center rounded-3">
-                                                <img src="{{ URL::asset('images/brands/img-8.png') }}" alt="" class="avatar-sm">
+                                                <img src="{{ URL::asset('build/images/brands/img-8.png') }}" alt="" class="avatar-sm">
                                             </a>
                                         </div>
                                         <div class="col-lg-4">
                                             <a href="#!" class="d-block p-2 border border-dashed text-center rounded-3">
-                                                <img src="{{ URL::asset('images/brands/img-2.png') }}" alt="" class="avatar-sm">
+                                                <img src="{{ URL::asset('build/images/brands/img-2.png') }}" alt="" class="avatar-sm">
                                             </a>
                                         </div>
                                         <div class="col-lg-4">
                                             <a href="#!" class="d-block p-2 border border-dashed text-center rounded-3">
-                                                <img src="{{ URL::asset('images/brands/img-3.png') }}" alt="" class="avatar-sm">
+                                                <img src="{{ URL::asset('build/images/brands/img-3.png') }}" alt="" class="avatar-sm">
                                             </a>
                                         </div>
                                         <div class="col-lg-4">
                                             <a href="#!" class="d-block p-2 border border-dashed text-center rounded-3">
-                                                <img src="{{ URL::asset('images/brands/img-4.png') }}" alt="" class="avatar-sm">
+                                                <img src="{{ URL::asset('build/images/brands/img-4.png') }}" alt="" class="avatar-sm">
                                             </a>
                                         </div>
                                         <div class="col-lg-4">
                                             <a href="#!" class="d-block p-2 border border-dashed text-center rounded-3">
-                                                <img src="{{ URL::asset('images/brands/img-5.png') }}" alt="" class="avatar-sm">
+                                                <img src="{{ URL::asset('build/images/brands/img-5.png') }}" alt="" class="avatar-sm">
                                             </a>
                                         </div>
                                         <div class="col-lg-4">
                                             <a href="#!" class="d-block p-2 border border-dashed text-center rounded-3">
-                                                <img src="{{ URL::asset('images/brands/img-6.png') }}" alt="" class="avatar-sm">
+                                                <img src="{{ URL::asset('build/images/brands/img-6.png') }}" alt="" class="avatar-sm">
                                             </a>
                                         </div>
                                     </div>
@@ -189,7 +189,7 @@
                     <div class="dropdown-menu dropdown-mega-menu-xl dropdown-menu-center p-0">
                         <div class="row g-0 g-lg-4">
                             <div class="col-lg-5 d-none d-lg-block">
-                                <div class="card rounded-start rounded-0 border-0 h-100 mb-0 overflow-hidden" style="background-image: url('images/ecommerce/img-2.jpg'); background-size: cover;">
+                                <div class="card rounded-start rounded-0 border-0 h-100 mb-0 overflow-hidden" style="background-image: url('build/images/ecommerce/img-2.jpg'); background-size: cover;">
                                     <div class="bg-overlay bg-primary" style="opacity: 0.90;"></div>
                                     <div class="card-body d-flex align-items-center justify-content-center position-relative">
                                         <div class="text-center">
@@ -382,7 +382,7 @@
             </div>
             <div class="dropdown header-item dropdown-hover-end">
                 <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="@if(@Auth::user()->avatar) {{ URL::asset('images/users')."/".@Auth::user()->avatar }} @else {{ URL::asset('images/users/avatar-1.jpg') }} @endif" alt="Header Avatar">
+                    <img class="rounded-circle header-profile-user" src="@if(@Auth::user()->avatar) {{ URL::asset('images/users')."/".@Auth::user()->avatar }} @else {{ URL::asset('build/images/users/avatar-1.jpg') }} @endif" alt="Header Avatar">
                 </button>
                 <!-- <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="ph-user-circle fs-22"></i>
@@ -418,7 +418,7 @@
                         <div class="flex-shrink-0">
                             <div class="avatar-md" style="height: 100%;">
                                 <div class="avatar-title bg-warning-subtle rounded-3">
-                                    <img src="{{ URL::asset('images/products/img-4.png') }}" alt="" class="avatar-sm">
+                                    <img src="{{ URL::asset('build/images/products/img-4.png') }}" alt="" class="avatar-sm">
                                 </div>
                             </div>
                         </div>
@@ -448,7 +448,7 @@
                         <div class="flex-shrink-0">
                             <div class="avatar-md" style="height: 100%;">
                                 <div class="avatar-title bg-info-subtle rounded-3">
-                                    <img src="{{ URL::asset('images/products/img-1.png') }}" alt="" class="avatar-sm">
+                                    <img src="{{ URL::asset('build/images/products/img-1.png') }}" alt="" class="avatar-sm">
                                 </div>
                             </div>
                         </div>
@@ -478,7 +478,7 @@
                         <div class="flex-shrink-0">
                             <div class="avatar-md" style="height: 100%;">
                                 <div class="avatar-title bg-danger-subtle rounded-3">
-                                    <img src="{{ URL::asset('images/products/img-6.png') }}" alt="" class="avatar-sm">
+                                    <img src="{{ URL::asset('build/images/products/img-6.png') }}" alt="" class="avatar-sm">
                                 </div>
                             </div>
                         </div>
@@ -508,7 +508,7 @@
                         <div class="flex-shrink-0">
                             <div class="avatar-md" style="height: 100%;">
                                 <div class="avatar-title bg-primary-subtle rounded-3">
-                                    <img src="{{ URL::asset('images/products/img-8.png') }}" alt="" class="avatar-sm">
+                                    <img src="{{ URL::asset('build/images/products/img-8.png') }}" alt="" class="avatar-sm">
                                 </div>
                             </div>
                         </div>
@@ -624,7 +624,7 @@
                             <h5 class="text-overflow text-muted fs-13 mb-2 mt-3 text-uppercase notification-title">People</h5>
                             <a href="javascript:void(0);" class="list-group-item dropdown-item notify-item">
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ URL::asset('images/users/avatar-1.jpg') }}" alt="" class="avatar-xs rounded-circle flex-shrink-0 me-2">
+                                    <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt="" class="avatar-xs rounded-circle flex-shrink-0 me-2">
                                     <div>
                                         <h6 class="mb-0">Ayaan Bowen</h6>
                                         <span class="fs-12 text-muted">React Developer</span>
@@ -633,7 +633,7 @@
                             </a>
                             <a href="javascript:void(0);" class="list-group-item dropdown-item notify-item">
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ URL::asset('images/users/avatar-7.jpg') }}" alt="" class="avatar-xs rounded-circle flex-shrink-0 me-2">
+                                    <img src="{{ URL::asset('build/images/users/avatar-7.jpg') }}" alt="" class="avatar-xs rounded-circle flex-shrink-0 me-2">
                                     <div>
                                         <h6 class="mb-0">Alexander Kristi</h6>
                                         <span class="fs-12 text-muted">React Developer</span>
@@ -642,7 +642,7 @@
                             </a>
                             <a href="javascript:void(0);" class="list-group-item dropdown-item notify-item">
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ URL::asset('images/users/avatar-5.jpg') }}" alt="" class="avatar-xs rounded-circle flex-shrink-0 me-2">
+                                    <img src="{{ URL::asset('build/images/users/avatar-5.jpg') }}" alt="" class="avatar-xs rounded-circle flex-shrink-0 me-2">
                                     <div>
                                         <h6 class="mb-0">Alan Carla</h6>
                                         <span class="fs-12 text-muted">React Developer</span>
@@ -680,37 +680,7 @@
 
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div class="modal fade" id="subscribeModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content border-0">
-            <div class="modal-body p-0 bg-info-subtle rounded">
-                <div class="row g-0 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="p-4 h-100">
-                            <span class="badge bg-info-subtle text-info fs-13">GET 10% SALE OFF</span>
-                            <h2 class="display-6 mt-2 mb-3">Subscribe & Get <b>50% Special</b> Discount On Email</h2>
-                            <p class="mb-4 pb-lg-2 fs-16">Join our newsletter to receive the latest updates and promotion</p>
-                            <form action="#!">
-                                <div class="position-relative ecommerce-subscript">
-                                    <input type="email" class="form-control rounded-pill border-0" placeholder="Enter your email">
-                                    <button type="submit" class="btn btn-info btn-hover rounded-pill">Subscript</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-4 pb-0">
-                            <img src="{{ URL::asset('images/subscribe.png') }}" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-<!-- end modal -->
 
 {{-- <a href="../backend/index" class="btn btn-warning position-fixed bottom-0 start-0 m-5 z-3 btn-hover d-none d-lg-block"><i class="bi bi-database align-middle me-1"></i> Backend</a> --}}
 
@@ -734,7 +704,7 @@
                         <li class="chat-list left">
                             <div class="conversation-list">
                                 <div class="chat-avatar">
-                                    <img src="{{ URL::asset('images/logo-sm.png') }}" alt="">
+                                    <img src="{{ URL::asset('build/images/logo-sm.png') }}" alt="">
                                 </div>
                                 <div class="user-chat-content">
                                     <div class="ctext-wrap">
@@ -785,7 +755,7 @@
                         <li class="chat-list left">
                             <div class="conversation-list">
                                 <div class="chat-avatar">
-                                    <img src="{{ URL::asset('images/logo-sm.png') }}" alt="">
+                                    <img src="{{ URL::asset('build/images/logo-sm.png') }}" alt="">
                                 </div>
                                 <div class="user-chat-content">
                                     <div class="ctext-wrap">

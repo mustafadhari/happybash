@@ -15,7 +15,7 @@
                             <div class="card-body text-center p-4">
 
                                 <div class="text-center px-sm-5 mx-5">
-                                    <img src="{{ URL::asset('images/comingsoon.png') }}" alt="" height="110">
+                                    <img src="{{ URL::asset('build/images/comingsoon.png') }}" alt="" height="110">
                                 </div>
                                 <div class="mt-4 text-center pt-3">
                                     <div class="position-relative">
@@ -73,5 +73,5 @@
 @endsection
 @section('scripts')
     <!-- Countdown js -->
-    <script src="{{ URL::asset('js/pages/coming-soon.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/pages/coming-soon.init.js') }}"></script>
 @endsection

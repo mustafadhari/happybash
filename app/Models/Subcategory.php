@@ -12,6 +12,7 @@ class Subcategory extends Model
     protected $fillable = [
         'category_id',
         'name',
+        'image_url',
     ];
 
     public function category()
@@ -22,6 +23,11 @@ class Subcategory extends Model
     public function products()
     {
         return $this->hasMany(Product::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(SubcategoryImage::class);
     }
 
 }

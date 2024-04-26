@@ -25,15 +25,15 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="position-relative">
-                                    <img src="{{ URL::asset('images/ecommerce/img-4.jpg') }}" alt=""
+                                    <img src="{{ URL::asset('build/images/ecommerce/img-4.jpg') }}" alt=""
                                         class="img-fluid rounded">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="vstack gap-4">
-                                    <img src="{{ URL::asset('images/ecommerce/img-1.jpg') }}" alt=""
+                                    <img src="{{ URL::asset('build/images/ecommerce/img-1.jpg') }}" alt=""
                                         class="img-fluid rounded">
-                                    <img src="{{ URL::asset('images/ecommerce/img-3.jpg') }}" alt=""
+                                    <img src="{{ URL::asset('build/images/ecommerce/img-3.jpg') }}" alt=""
                                         class="img-fluid rounded">
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                 <div class="col-xl-3 col-md-6">
                     <div class="team-box text-center">
                         <div class="team-img">
-                            <img src="{{ URL::asset('images/users/avatar-7.jpg') }}" alt=""
+                            <img src="{{ URL::asset('build/images/users/avatar-7.jpg') }}" alt=""
                                 class="img-fluid rounded rounded-circle border border-dashed border-dark border-opacity-25">
                         </div>
                         <div class="mt-4 pt-1">
@@ -128,7 +128,7 @@
                 <div class="col-xl-3 col-md-6">
                     <div class="team-box text-center">
                         <div class="team-img">
-                            <img src="{{ URL::asset('images/users/avatar-1.jpg') }}" alt=""
+                            <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt=""
                                 class="img-fluid rounded rounded-circle border border-dashed border-dark border-opacity-25">
                         </div>
                         <div class="mt-4 pt-1">
@@ -142,7 +142,7 @@
                 <div class="col-xl-3 col-md-6">
                     <div class="team-box text-center">
                         <div class="team-img">
-                            <img src="{{ URL::asset('images/users/avatar-2.jpg') }}" alt=""
+                            <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt=""
                                 class="img-fluid rounded rounded-circle border border-dashed border-dark border-opacity-25">
                         </div>
                         <div class="mt-4 pt-1">
@@ -156,7 +156,7 @@
                 <div class="col-xl-3 col-md-6">
                     <div class="team-box text-center">
                         <div class="team-img">
-                            <img src="{{ URL::asset('images/users/avatar-8.jpg') }}" alt=""
+                            <img src="{{ URL::asset('build/images/users/avatar-8.jpg') }}" alt=""
                                 class="img-fluid rounded rounded-circle border border-dashed border-dark border-opacity-25">
                         </div>
                         <div class="mt-4 pt-1">
@@ -176,7 +176,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div>
-                        <img src="{{ URL::asset('images/ecommerce/img-5.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ URL::asset('build/images/ecommerce/img-5.jpg') }}" alt="" class="img-fluid rounded">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -196,7 +196,7 @@
     </section>
 
     <section class="section"
-        style="background-image: url('images/profile-bg.jpg'); background-size: cover;background-position: center;">
+        style="background-image: url('build/images/profile-bg.jpg'); background-size: cover;background-position: center;">
         <div class="bg-overlay bg-primary" style="opacity: 0.85;"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -224,7 +224,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -236,7 +236,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">2 Days Return Policy</h5>
@@ -248,7 +248,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt=""
                                 class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
@@ -261,7 +261,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">24 X 7 Service</h5>
@@ -277,7 +277,7 @@
 @endsection
 @section('scripts')
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
     <script>
         initModeSetting()
     </script>

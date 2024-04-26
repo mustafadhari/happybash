@@ -5,7 +5,7 @@
 @section('css')
     <!-- extra css -->
     <!--Swiper slider css-->
-    <link href="{{ URL::asset('libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ URL::asset('build/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('content')
     <section class="position-relative">
@@ -13,7 +13,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="ecommerce-home bg-danger-subtle"
-                        style="background-image: url('{{ URL::asset('images/ecommerce/home/img-1.png')}}');">
+                        style="background-image: url('{{ URL::asset('build/images/ecommerce/home/img-1.png')}}');">
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-7">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="ecommerce-home bg-primary-subtle"
-                        style="background-image: url('{{ URL::asset('images/ecommerce/home/img-2.png')}}');">
+                        style="background-image: url('{{ URL::asset('build/images/ecommerce/home/img-2.png')}}');">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="ecommerce-home"
-                        style="background-image: url('{{ URL::asset('images/ecommerce/home/img-6.jpg') }}');background-size: cover;">
+                        style="background-image: url('{{ URL::asset('build/images/ecommerce/home/img-6.jpg') }}');background-size: cover;">
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-6">
@@ -92,7 +92,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -103,7 +103,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">2 Days Return Policy</h5>
@@ -114,7 +114,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt=""
                                 class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
@@ -126,7 +126,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">24 X 7 Service</h5>
@@ -138,519 +138,45 @@
         </div>
     </section>
 
-    <section class="section pt-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <a href="#!"
-                        class="product-banner-1 mt-4 mt-lg-0 rounded overflow-hidden position-relative d-block">
-                        <img src="{{ URL::asset('images/ecommerce/features/img-3.jpg') }}" class="img-fluid rounded"
-                            alt="">
-                        <div class="bg-overlay blue"></div>
-                        <div class="product-content p-4">
-                            <p class="text-uppercase text-white mb-2">Up to 50-70%</p>
-                            <h1 class="text-white lh-base fw-medium ff-secondary"> Women's Sportwere Sales</h1>
-                            <div class="product-btn mt-4 text-white">
-                                Shop Now <i class="bi bi-arrow-right ms-2"></i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a href="#!"
-                        class="product-banner-1 mt-4 mt-lg-0 rounded overflow-hidden position-relative d-block">
-                        <img src="{{ URL::asset('images/ecommerce/features/img-1.jpg') }}" class="img-fluid rounded"
-                            alt="">
-                        <div class="product-content p-4">
-                            <p class="text-uppercase fw-medium text-secondary mb-2">Summer Sales</p>
-                            <h1 class="lh-base ff-secondary text-dark">Trendy Fashion Clothes</h1>
-                            <div class="product-btn mt-4">
-                                Shop Now <i class="bi bi-arrow-right ms-2"></i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- START PRODUCT -->
-    <section class="section pt-0">
+    
+    <section>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="text-center">
-                        <h3 class="mb-3">Top Picks Products Of The Week</h3>
-                        <p class="text-muted fs-15 mb-0">This ranges from women and men's outfits to children's clothing,
-                            shoes, accessories, and more. People love their clothes, and fashion isn't going anywhere!</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
                 <div class="col-lg-12">
+                    <div class="mb-5 text-center">
+                        <h3 class="mb-3">Browse by</h3>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+            <div class="row">
+            @foreach($categories as $category)
+                <div class="col-lg-2 col-md-3 col-sm-6">
                     <div class="text-center">
-                        <ul class="list-inline categories-filter animation-nav " id="filter">
-                            <li class="list-inline-item"><a class="categories active" data-filter="*">All Arrival</a>
-                            </li>
-                            <li class="list-inline-item"><a class="categories" data-filter=".seller">Best Seller</a></li>
-                            <li class="list-inline-item"><a class="categories" data-filter=".hot">Hot Collection</a></li>
-                            <li class="list-inline-item"><a class="categories" data-filter=".trendy">Trendy</a></li>
-                            <li class="list-inline-item"><a class="categories" data-filter=".arrival">New Arrival</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="row gallery-wrapper mt-4 pt-2">
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 seller hot arrival"
-                            data-category="hot arrival">
-                            <div class="card overflow-hidden">
-                                <div class="bg-warning-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-6.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <p class="fs-11 fw-medium badge bg-primary py-2 px-3 product-lable mb-0">Best Arrival
-                                    </p>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">Man Relaxed Fit T-shirt</h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">4.9 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$199.00 <span
-                                                    class="text-muted fs-12"><del>$425.00</del></span></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Check if category has images and display them, otherwise show default image -->
+                        @if($category->images->isNotEmpty())
+                            @foreach($category->images as $image)
+                                <img src="{{ URL::asset($image->image_url) }}" alt="{{ $category->name }}"
+                                    class="img-fluid rounded-circle bg-warning-subtle border border-2 border-warning border-opacity-10 p-0">
+                            @endforeach
+                        @else
+                            <img src="{{ URL::asset('build/images/users/user-dummy-img.jpg') }}" alt="Default Image"
+                                class="img-fluid rounded-circle bg-warning-subtle border border-2 border-warning border-opacity-10 p-4">
+                        @endif
+                        <div class="mt-4">
+                            <a href="{{ route('subcategories.show', $category->id) }}">
+                                <h5 class="mb-2 fs-15">{{ $category->name }}</h5>
+                            </a>
                         </div>
-                        <!-- end col -->
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 seller hot" data-category="seller hot">
-                            <div class="card overflow-hidden">
-                                <div class="bg-info-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-7.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">Innovative education book </h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">3.2 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$129.00</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 trendy" data-category="trendy">
-                            <div class="card overflow-hidden">
-                                <div class="bg-danger-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-1.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">Hp Trendsetter Backpack</h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">4.3 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$299.00 <span
-                                                    class="text-muted fs-12"><del>$399.00</del></span></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 trendy" data-category="trendy">
-                            <div class="card overflow-hidden">
-                                <div class="bg-warning-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-2.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">Hoodie Newyorker Winter Clothes
-                                            </h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">3.1 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$159.00</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 seller arrival" data-category="arrival">
-                            <div class="card overflow-hidden">
-                                <div class="bg-danger-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-3.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <p class="fs-11 fw-medium badge bg-primary py-2 px-3 product-lable mb-0">Best Arrival
-                                    </p>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">Leather band Smartwatches</h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">3.7 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$159.00</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 seller hot" data-category="seller hot">
-                            <div class="card overflow-hidden">
-                                <div class="bg-success-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-4.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">Slippers Open Toe</h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">2.6 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$169.00 <span
-                                                    class="text-muted fs-12"><del>$225.00</del></span></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project hot arrival"
-                            data-category="hot arrival">
-                            <div class="card overflow-hidden">
-                                <div class="bg-info-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-8.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">T-shirt Geometric Print pattern
-                                            </h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">4.9 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$339.00</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 trendy" data-category="trendy">
-                            <div class="card overflow-hidden">
-                                <div class="bg-danger-subtle rounded-top py-4">
-                                    <div class="gallery-product">
-                                        <img src="{{ URL::asset('images/products/img-5.png') }}" alt=""
-                                            style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
-                                    </div>
-                                    <p class="fs-11 fw-medium badge bg-primary py-2 px-3 product-lable mb-0">Best Arrival
-                                    </p>
-                                    <div class="gallery-product-actions">
-                                        <div class="mb-2">
-                                            <button type="button" class="btn btn-danger btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-heart-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-heart align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-
-                                        <div>
-                                            <button type="button" class="btn btn-success btn-sm custom-toggle"
-                                                data-bs-toggle="button">
-                                                <span class="icon-on"><i
-                                                        class="mdi mdi-eye-outline align-bottom fs-15"></i></span>
-                                                <span class="icon-off"><i
-                                                        class="mdi mdi-eye align-bottom fs-15"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="product-btn px-3">
-                                        <a href="shop-cart" class="btn btn-primary btn-sm w-75 add-btn"><i
-                                                class="mdi mdi-cart me-1"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <a href="product-details">
-                                            <h6 class="fs-15 lh-base text-truncate mb-0">Leather sports shoes on wood</h6>
-                                        </a>
-                                        <div class="mt-3">
-                                            <span class="float-end">4.9 <i
-                                                    class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                            <h5 class="mb-0">$435.00 <span
-                                                    class="text-muted fs-12"><del>$636.00</del></span></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-                    </div>
-
-                    <div class="mt-4 text-center">
-                        <a href="product-list-defualt" class="btn btn-soft-primary btn-hover">View All Products <i
-                                class="mdi mdi-arrow-right align-middle ms-1"></i></a>
                     </div>
                 </div>
+            @endforeach
+                <!--end col-->
             </div>
+            <!--end row-->
         </div>
-    </section>
-    <!-- END PRODUCT -->
-
-    <section class="position-relative bg-danger-subtle bg-cta">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="py-5">
-                        <p class="text-uppercase  badge bg-danger-subtle text-danger fs-13">Get <b>50%</b> off to your order</p>
-
-                        <h1 class="lh-base fw-semibold mb-3 text-capitalize">Deal off the week</h1>
-                        <p class="fs-16 mt-2">The hands-down winner of denim-friendly sandal styles has to be flat and
-                            simple thong sandals. They can be paired with virtually every style of women's jeans imaginable,
-                            and, as long as you can stand the toe strap, they tend to be really comfortable as well.</p>
-                        <div class="row">
-                            <div class="col-lg-10">
-                                <div class="ecommerce-land-countdown mt-3 mb-0">
-                                    <div data-countdown="Jan 30, 2025" class="countdownlist"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-2 d-flex gap-2">
-                            <a href="#!" class="btn btn-primary w-md btn-hover">Shopping Now</a>
-                            <a href="#!" class="btn btn-danger w-md btn-hover">Subscribe</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="mt-lg-n5">
-                        <img src="{{ URL::asset('images/ecommerce/home/cta.png') }}" alt="" class="mt-lg-n4">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--end conatiner-->
     </section>
 
     <section class="section pb-0">
@@ -678,7 +204,7 @@
                                 <div class="card overflow-hidden">
                                     <div class="bg-dark-subtle rounded-top py-4">
                                         <div class="gallery-product">
-                                            <img src="{{ URL::asset('images/products/img-9.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-9.png') }}" alt=""
                                                 style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
                                         </div>
                                     </div>
@@ -706,7 +232,7 @@
                                 <div class="card overflow-hidden">
                                     <div class="bg-warning-subtle rounded-top py-4">
                                         <div class="gallery-product">
-                                            <img src="{{ URL::asset('images/products/img-10.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-10.png') }}" alt=""
                                                 style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
                                         </div>
                                     </div>
@@ -734,7 +260,7 @@
                                 <div class="card overflow-hidden">
                                     <div class="bg-primary-subtle rounded-top py-4">
                                         <div class="gallery-product">
-                                            <img src="{{ URL::asset('images/products/img-11.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-11.png') }}" alt=""
                                                 style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
                                         </div>
                                     </div>
@@ -763,7 +289,7 @@
                                 <div class="card overflow-hidden">
                                     <div class="bg-danger-subtle rounded-top py-4">
                                         <div class="gallery-product">
-                                            <img src="{{ URL::asset('images/products/img-12.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-12.png') }}" alt=""
                                                 style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
                                         </div>
                                     </div>
@@ -791,7 +317,7 @@
                                 <div class="card overflow-hidden">
                                     <div class="bg-secondary-subtle rounded-top py-4">
                                         <div class="gallery-product">
-                                            <img src="{{ URL::asset('images/products/img-14.png') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/products/img-14.png') }}" alt=""
                                                 style="max-height: 215px;max-width: 100%;" class="mx-auto d-block">
                                         </div>
                                     </div>
@@ -853,7 +379,7 @@
                                     </div>
                                     <div class="pt-4">
                                         <div class="d-flex align-items-center mt-4 pt-1">
-                                            <img src="{{ URL::asset('images/users/avatar-2.jpg') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt=""
                                                 class="avatar-sm rounded">
                                             <div class="flex-grow-1 ms-3">
                                                 <h5 class="mb-2 fs-16">George Obrien</h5>
@@ -872,7 +398,7 @@
                                     </div>
                                     <div class="pt-4">
                                         <div class="d-flex align-items-center mt-4 pt-1">
-                                            <img src="{{ URL::asset('images/users/avatar-7.jpg') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/users/avatar-7.jpg') }}" alt=""
                                                 class="avatar-sm rounded">
                                             <div class="flex-grow-1 ms-3">
                                                 <h5 class="mb-2 fs-16">Chadwick A. Scott</h5>
@@ -892,7 +418,7 @@
                                     </div>
                                     <div class="pt-4">
                                         <div class="d-flex align-items-center mt-4 pt-1">
-                                            <img src="{{ URL::asset('images/users/avatar-8.jpg') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/users/avatar-8.jpg') }}" alt=""
                                                 class="avatar-sm rounded">
                                             <div class="flex-grow-1 ms-3">
                                                 <h5 class="mb-2 fs-16">Tommy Moreno</h5>
@@ -911,7 +437,7 @@
                                     </div>
                                     <div class="pt-4">
                                         <div class="d-flex align-items-center mt-4 pt-1">
-                                            <img src="{{ URL::asset('images/users/avatar-10.jpg') }}" alt=""
+                                            <img src="{{ URL::asset('build/images/users/avatar-10.jpg') }}" alt=""
                                                 class="avatar-sm rounded">
                                             <div class="flex-grow-1 ms-3">
                                                 <h5 class="mb-2 fs-16">Mary Atkinson</h5>
@@ -932,7 +458,7 @@
                 <div class="col">
                     <div class="client-images">
                         <a href="#!">
-                            <img src="{{ URL::asset('images/clients/paypal.svg') }}" alt="client-img"
+                            <img src="{{ URL::asset('build/images/clients/paypal.svg') }}" alt="client-img"
                                 class="mx-auto img-fluid d-block">
                         </a>
                     </div>
@@ -940,7 +466,7 @@
                 <div class="col">
                     <div class="client-images">
                         <a href="#!">
-                            <img src="{{ URL::asset('images/clients/walmart.svg') }}" alt="client-img"
+                            <img src="{{ URL::asset('build/images/clients/walmart.svg') }}" alt="client-img"
                                 class="mx-auto img-fluid d-block">
                         </a>
                     </div>
@@ -948,7 +474,7 @@
                 <div class="col">
                     <div class="client-images">
                         <a href="#!">
-                            <img src="{{ URL::asset('images/clients/spotify.svg') }}" alt="client-img"
+                            <img src="{{ URL::asset('build/images/clients/spotify.svg') }}" alt="client-img"
                                 class="mx-auto img-fluid d-block">
                         </a>
                     </div>
@@ -956,7 +482,7 @@
                 <div class="col">
                     <div class="client-images">
                         <a href="#!">
-                            <img src="{{ URL::asset('images/clients/shopify.svg') }}" alt="client-img"
+                            <img src="{{ URL::asset('build/images/clients/shopify.svg') }}" alt="client-img"
                                 class="mx-auto img-fluid d-block">
                         </a>
                     </div>
@@ -964,7 +490,7 @@
                 <div class="col">
                     <div class="client-images">
                         <a href="#!">
-                            <img src="{{ URL::asset('images/clients/lenovo.svg') }}" alt="client-img"
+                            <img src="{{ URL::asset('build/images/clients/lenovo.svg') }}" alt="client-img"
                                 class="mx-auto img-fluid d-block">
                         </a>
                     </div>
@@ -990,7 +516,7 @@
             <div class="row mt-5">
                 <div class="col-lg-4">
                     <div class="card overflow-hidden">
-                        <img src="{{ URL::asset('images/small/img-3.jpg') }}" class="img-fluid" alt="">
+                        <img src="{{ URL::asset('build/images/small/img-3.jpg') }}" class="img-fluid" alt="">
                         <div class="card-body">
                             <div class="entry-meta">
                                 <a href="#!" class="text-muted">12 <i class="mdi mdi-like"></i> Like</a>
@@ -1017,7 +543,7 @@
 
                 <div class="col-lg-4">
                     <div class="card overflow-hidden">
-                        <img src="{{ URL::asset('images/small/img-8.jpg') }}" class="img-fluid" alt="">
+                        <img src="{{ URL::asset('build/images/small/img-8.jpg') }}" class="img-fluid" alt="">
                         <div class="card-body">
                             <div class="entry-meta">
                                 <a href="#!" class="text-muted">24 <i class="mdi mdi-like"></i> Like</a>
@@ -1043,7 +569,7 @@
 
                 <div class="col-lg-4">
                     <div class="card overflow-hidden">
-                        <img src="{{ URL::asset('images/small/img-6.jpg') }}" class="img-fluid" alt="">
+                        <img src="{{ URL::asset('build/images/small/img-6.jpg') }}" class="img-fluid" alt="">
                         <div class="card-body">
                             <div class="entry-meta">
                                 <a href="#!" class="text-muted">48 <i class="mdi mdi-like"></i> Like</a>
@@ -1095,7 +621,7 @@
                 <div class="col">
                     <div class="insta-img">
                         <a href="#!" class="stretched-link">
-                            <img src="{{ URL::asset('images/ecommerce/instagram/img-1.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ URL::asset('build/images/ecommerce/instagram/img-1.jpg') }}" class="img-fluid" alt="">
                             <i class="ri-instagram-line"></i>
                         </a>
                     </div>
@@ -1104,7 +630,7 @@
                 <div class="col">
                     <div class="insta-img">
                         <a href="#!" class="stretched-link">
-                            <img src="{{ URL::asset('images/ecommerce/instagram/img-2.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ URL::asset('build/images/ecommerce/instagram/img-2.jpg') }}" class="img-fluid" alt="">
                             <i class="ri-instagram-line"></i>
                         </a>
                     </div>
@@ -1113,7 +639,7 @@
                 <div class="col d-none d-md-block">
                     <div class="insta-img">
                         <a href="#!" class="stretched-link">
-                            <img src="{{ URL::asset('images/ecommerce/instagram/img-3.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ URL::asset('build/images/ecommerce/instagram/img-3.jpg') }}" class="img-fluid" alt="">
                             <i class="ri-instagram-line"></i>
                         </a>
                     </div>
@@ -1122,7 +648,7 @@
                 <div class="col d-none d-md-block">
                     <div class="insta-img">
                         <a href="#!" class="stretched-link">
-                            <img src="{{ URL::asset('images/ecommerce/instagram/img-4.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ URL::asset('build/images/ecommerce/instagram/img-4.jpg') }}" class="img-fluid" alt="">
                             <i class="ri-instagram-line"></i>
                         </a>
                     </div>
@@ -1130,7 +656,7 @@
                 <div class="col d-none d-lg-block">
                     <div class="insta-img">
                         <a href="#!" class="stretched-link">
-                            <img src="{{ URL::asset('images/ecommerce/instagram/img-5.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ URL::asset('build/images/ecommerce/instagram/img-5.jpg') }}" class="img-fluid" alt="">
                             <i class="ri-instagram-line"></i>
                         </a>
                     </div>
@@ -1138,7 +664,7 @@
                 <div class="col d-none d-lg-block">
                     <div class="insta-img">
                         <a href="#!" class="stretched-link">
-                            <img src="{{ URL::asset('images/ecommerce/instagram/img-6.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ URL::asset('build/images/ecommerce/instagram/img-6.jpg') }}" class="img-fluid" alt="">
                             <i class="ri-instagram-line"></i>
                         </a>
                     </div>
@@ -1156,15 +682,15 @@
 @endsection
 @section('scripts')
     <!-- isotope-layout -->
-    <script src="{{ URL::asset('libs/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
     <!--Swiper slider js-->
-    <script src="{{ URL::asset('libs/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/swiper/swiper-bundle.min.js') }}"></script>
 
     <!-- Countdown js -->
-    <script src="{{ URL::asset('js/pages/coming-soon.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/pages/coming-soon.init.js') }}"></script>
 
-    <script src="{{ URL::asset('js/frontend/landing-index.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/landing-index.init.js') }}"></script>
 
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

@@ -6,6 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Subcategory;
 
 class ProductController extends Controller
 {
@@ -26,16 +27,17 @@ class ProductController extends Controller
      public function show($id)
      {
          $product = Product::with('subcategory', 'images')->findOrFail($id);
-         return response()->json($product);
+         if (request()->wantsJson()) {
+                return response()->json($product);
+        } else {
+            return response()->view('products.details', ['product' => $product]);
+        }
      }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('products.create');
-    }
+     public function showProducts($subcategoryId) {
+        $products = Product::where('subcategory_id', $subcategoryId)->get();
+        return view('product-list', ['products' => $products]);
+    }    
 
     /**
      * Store a newly created resource in storage.
@@ -84,7 +86,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        return view('products.edit', ['product' => $product]);
+        //return view('products.edit', ['product' => $product]);
     }
 
     /**

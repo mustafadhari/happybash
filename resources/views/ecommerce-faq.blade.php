@@ -192,7 +192,7 @@
     </section>
 
     <section class="section"
-        style="background-image: url('images/profile-bg.jpg'); background-size: cover;background-position: center;">
+        style="background-image: url('build/images/profile-bg.jpg'); background-size: cover;background-position: center;">
         <div class="bg-overlay bg-secondary" style="opacity: 0.85;"></div>
         <div class="container">
             <div class="row">
@@ -214,8 +214,8 @@
 @endsection
 @section('scripts')
     <!-- Masonry plugin -->
-    <script src="{{ URL::asset('libs/masonry-layout/masonry.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/masonry-layout/masonry.pkgd.min.js') }}"></script>
 
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

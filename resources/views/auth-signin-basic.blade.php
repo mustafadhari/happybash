@@ -15,15 +15,15 @@
                             <div class="card-header bg-primary border-0">
                                 <div class="row">
                                     <div class="col-lg-4 col-3">
-                                        <img src="{{ URL::asset('images/auth/img-1.png') }}" alt="" class="img-fluid">
+                                        <img src="{{ URL::asset('build/images/auth/img-1.png') }}" alt="" class="img-fluid">
                                     </div>
                                     <div class="col-lg-8 col-9">
-                                        <h1 class="text-white lh-base fw-lighter">Join Our Toner Store</h1>
+                                        <h1 class="text-white lh-base fw-lighter">Easily | Quickly | Happily</h1>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <p class="text-muted fs-15">Sign in to continue to Toner.</p>
+                                <p class="text-muted fs-15">Elevate your event planning for every occasion.</p>
                                 <div class="p-2">
                                     <form action="index">
 
@@ -110,5 +110,5 @@
     </div>
 @endsection
 @section('scripts')
-    <script src="{{ URL::asset('js/pages/password-addon.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/pages/password-addon.init.js') }}"></script>
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Subcategory;
 use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
@@ -13,13 +14,26 @@ class CategoryController extends Controller
         $categories = Category::all();
         return response()->json($categories);
     }
+
+    public function showCategories()
+    {
+        $categories = Category::all();
+        return view('index', ['categories' => $categories]);
+    }
+
+    public function showSubcategories($categoryId) {
+        $category = Category::with(['subcategories.images'])
+                             ->findOrFail($categoryId);
+    
+        return view('subcategories', ['category' => $category]);
+    }
     
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'image' => 'sometimes',
-            'image.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required|max:255',
+            'images' => 'sometimes|array',
+            'images.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $category = Category::create($validatedData);
@@ -41,8 +55,9 @@ class CategoryController extends Controller
         $category = Category::findOrFail($categoryId);
 
         $validatedData = $request->validate([
-            'name' => 'sometimes|required|string|max:255',
-            // Other validations as necessary
+            'name' => 'sometimes|max:255',
+            'images' => 'sometimes|array',
+            'images.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $category->update($validatedData);

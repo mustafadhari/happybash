@@ -5,9 +5,9 @@
 @section('css')
     <!-- extra css -->
     <!-- nouisliderribute css -->
-    <link rel="stylesheet" href="{{ URL::asset('libs/nouislider/nouislider.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('build/libs/nouislider/nouislider.min.css') }}">
     <!-- gridjs css -->
-    <link rel="stylesheet" href="{{ URL::asset('libs/gridjs/mermaid.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('build/libs/gridjs/mermaid.min.css') }}">
 @endsection
 @section('content')
     <section class="section pb-0 mt-4">
@@ -15,7 +15,7 @@
             <div class="row g-3">
                 <div class="col-lg-4 col-md-6">
                     <div class="product-banner-1 mt-3 mt-lg-0 rounded overflow-hidden">
-                        <img src="{{ URL::asset('images/ecommerce/features/img-3.jpg') }}" class="img-fluid rounded" alt="">
+                        <img src="{{ URL::asset('build/images/ecommerce/features/img-3.jpg') }}" class="img-fluid rounded" alt="">
                         <div class="bg-overlay blue"></div>
                         <div class="product-content p-4">
                             <p class="text-uppercase fw-semibold text-white mb-2">Up to 50-70%</p>
@@ -30,7 +30,7 @@
                 <!--end col-->
                 <div class="col-lg-4 col-md-6">
                     <div class="product-banner-1 mt-4 mt-lg-0 rounded overflow-hidden right">
-                        <img src="{{ URL::asset('images/ecommerce/features/img-2.jpg') }}" class="img-fluid rounded" alt="">
+                        <img src="{{ URL::asset('build/images/ecommerce/features/img-2.jpg') }}" class="img-fluid rounded" alt="">
                         <div class="bg-overlay"></div>
                         <div class="product-content p-4 text-end">
                             <p class="text-uppercase text-white fw-semibold mb-2">MEGA SALE</p>
@@ -46,7 +46,7 @@
                 <!--end col-->
                 <div class="col-lg-4 col-md-6">
                     <div class="product-banner-1 mt-4 mt-lg-0 rounded overflow-hidden">
-                        <img src="{{ URL::asset('images/ecommerce/features/img-1.jpg') }}" class="img-fluid rounded" alt="">
+                        <img src="{{ URL::asset('build/images/ecommerce/features/img-1.jpg') }}" class="img-fluid rounded" alt="">
                         <div class="product-content p-4">
                             <p class="text-uppercase fw-semibold text-dark mb-2">Summer Sales</p>
                             <h1 class="lh-base ff-secondary display-6 display-xl-5">Trendy Fashion Clothes</h1>
@@ -556,7 +556,7 @@
                     <div class="ecommerce-deals-widgets">
                         <div class="card overflow-hidden mb-0">
                             <div class="gallery-product">
-                                <img src="{{ URL::asset('images/ecommerce/img-5.jpg') }}" alt=""
+                                <img src="{{ URL::asset('build/images/ecommerce/img-5.jpg') }}" alt=""
                                     class="mx-auto d-block object-fit-cover">
                             </div>
                         </div>
@@ -589,7 +589,7 @@
                     <div class="ecommerce-deals-widgets">
                         <div class="card overflow-hidden mb-0">
                             <div class="gallery-product">
-                                <img src="{{ URL::asset('images/ecommerce/img-3.jpg') }}" alt=""
+                                <img src="{{ URL::asset('build/images/ecommerce/img-3.jpg') }}" alt=""
                                     class="mx-auto d-block object-fit-cover">
                             </div>
                         </div>
@@ -621,7 +621,7 @@
                     <div class="ecommerce-deals-widgets">
                         <div class="card overflow-hidden mb-0">
                             <div class="gallery-product">
-                                <img src="{{ URL::asset('images/ecommerce/img-1.jpg') }}" alt=""
+                                <img src="{{ URL::asset('build/images/ecommerce/img-1.jpg') }}" alt=""
                                     class="mx-auto d-block object-fit-cover">
                             </div>
                         </div>
@@ -657,7 +657,7 @@
     </section>
 
     <section class="section"
-        style="background-image: url('images/profile-bg.jpg'); background-size: cover;background-position: center;">
+        style="background-image: url('build/images/profile-bg.jpg'); background-size: cover;background-position: center;">
         <div class="bg-overlay bg-primary" style="opacity: 0.85;"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -685,7 +685,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -697,7 +697,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">2 Days Return Policy</h5>
@@ -709,7 +709,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt=""
                                 class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
@@ -722,7 +722,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">24 X 7 Service</h5>
@@ -739,18 +739,18 @@
 @endsection
 @section('scripts')
     <!-- nouisliderribute js -->
-    <script src="{{ URL::asset('libs/nouislider/nouislider.min.js') }}"></script>
-    <script src="{{ URL::asset('libs/wnumb/wNumb.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/nouislider/nouislider.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/wnumb/wNumb.min.js') }}"></script>
 
     <!-- gridjs js -->
-    <script src="{{ URL::asset('libs/gridjs/gridjs.umd.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/gridjs/gridjs.umd.js') }}"></script>
 
     <!-- Product-list init js -->
-    <script src="{{ URL::asset('js/frontend/product-list-table.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/product-list-table.init.js') }}"></script>
 
     <!-- coming-soon -->
-    <script src="{{ URL::asset('js/pages/coming-soon.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/pages/coming-soon.init.js') }}"></script>
 
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

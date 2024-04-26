@@ -299,7 +299,7 @@
                             <td style="padding: 8px; vertical-align: top;text-align: center;">
                                 <div style="position: relative;">
                                     <div style="padding: 35px;background-color: #fff;border-radius: 6px;">
-                                        <img src="{{ URL::asset('images/products/img-5.png') }}" alt="" height="150">
+                                        <img src="{{ URL::asset('build/images/products/img-5.png') }}" alt="" height="150">
                                     </div>
                                     <a href="#!">
                                         <h6
@@ -311,7 +311,7 @@
                             <td style="padding: 8px; vertical-align: top;text-align: center;">
                                 <div style="position: relative;">
                                     <div style="padding: 35px;background-color: #fff;border-radius: 6px;">
-                                        <img src="{{ URL::asset('images/products/img-14.png') }}" alt="" height="150">
+                                        <img src="{{ URL::asset('build/images/products/img-14.png') }}" alt="" height="150">
                                     </div>
                                     <a href="#!">
                                         <h6
@@ -458,7 +458,7 @@
                             <td style="padding: 8px; vertical-align: top;text-align: center;">
                                 <div style="position: relative;">
                                     <div style="padding: 35px;background-color: #113b4f;border-radius: 6px;">
-                                        <img src="{{ URL::asset('images/products/img-5.png') }}" alt="" height="150">
+                                        <img src="{{ URL::asset('build/images/products/img-5.png') }}" alt="" height="150">
                                     </div>
                                     <a href="#!">
                                         <h6
@@ -470,7 +470,7 @@
                             <td style="padding: 8px; vertical-align: top;text-align: center;">
                                 <div style="position: relative;">
                                     <div style="padding: 35px;background-color: #113b4f;border-radius: 6px;">
-                                        <img src="{{ URL::asset('images/products/img-14.png') }}" alt="" height="150">
+                                        <img src="{{ URL::asset('build/images/products/img-14.png') }}" alt="" height="150">
                                     </div>
                                     <a href="#!">
                                         <h6

@@ -5,7 +5,7 @@
 @section('css')
     <!-- extra css -->
     <!-- nouisliderribute css -->
-    <link rel="stylesheet" href="{{ URL::asset('libs/nouislider/nouislider.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('build/libs/nouislider/nouislider.min.css') }}">
 @endsection
 @section('content')
     <section class="section pb-0 mt-4">
@@ -13,7 +13,7 @@
             <div class="row g-2">
                 <div class="col-lg-7">
                     <a href="#!" class="product-banner-1 mt-4 mt-lg-0 rounded overflow-hidden d-block">
-                        <img src="{{ URL::asset('images/ecommerce/features/img-5.jpg') }}" class="w-100 rounded object-fit-cover"
+                        <img src="{{ URL::asset('build/images/ecommerce/features/img-5.jpg') }}" class="w-100 rounded object-fit-cover"
                             alt="" style="max-height: 480px;">
                         <div class="product-content p-3 ps-5" style="max-width: 390px;">
                             <p class="text-uppercase fs-15 text-secondary fw-semibold mb-2">New Arrival</p>
@@ -29,7 +29,7 @@
                     <div class="row g-2">
                         <div class="col-lg-12">
                             <a href="#!" class="product-banner-1 mt-4 mt-lg-0 rounded overflow-hidden d-block">
-                                <img src="{{ URL::asset('images/ecommerce/features/img-4.jpg') }}"
+                                <img src="{{ URL::asset('build/images/ecommerce/features/img-4.jpg') }}"
                                     class="w-100 rounded object-fit-cover" alt="" style="max-height: 236px;">
                                 <div class="product-content p-3 ps-5">
                                     <p class="text-uppercase fw-semibold fs-14 mb-2">Back Friday Sale</p>
@@ -40,7 +40,7 @@
                         <!--end col-->
                         <div class="col-lg-12">
                             <a href="#!" class="product-banner-1 mt-4 mt-lg-0 rounded overflow-hidden d-block">
-                                <img src="{{ URL::asset('images/ecommerce/features/img-1.jpg') }}"
+                                <img src="{{ URL::asset('build/images/ecommerce/features/img-1.jpg') }}"
                                     class="w-100 rounded object-fit-cover" alt="" style="max-height: 236px;">
                                 <div class="product-content p-3 ps-5">
                                     <h1 class="lh-base ff-secondary text-dark fw-medium"> Women's Sportwere Sales</h1>
@@ -579,7 +579,7 @@
                 <!--end col-->
                 <div class="col-lg-4">
                     <div class="mt-4 mt-lg-0">
-                        <img src="{{ URL::asset('images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
+                        <img src="{{ URL::asset('build/images/ecommerce/subscribe.png') }}" alt="" class="img-fluid">
                     </div>
                 </div>
                 <!--end col-->
@@ -595,7 +595,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -607,7 +607,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">2 Days Return Policy</h5>
@@ -619,7 +619,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt=""
+                            <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt=""
                                 class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
@@ -632,7 +632,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="d-flex align-items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                            <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                         </div>
                         <div class="flex-grow-1">
                             <h5 class="fs-15">24 X 7 Service</h5>
@@ -649,12 +649,12 @@
 @endsection
 @section('scripts')
     <!-- nouisliderribute js -->
-    <script src="{{ URL::asset('libs/nouislider/nouislider.min.js') }}"></script>
-    <script src="{{ URL::asset('libs/wnumb/wNumb.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/nouislider/nouislider.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/wnumb/wNumb.min.js') }}"></script>
 
     <!-- Product-grid init js -->
-    <script src="{{ URL::asset('js/frontend/product-grid.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/product-grid.init.js') }}"></script>
 
     <!-- landing-index js -->
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

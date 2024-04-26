@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Auth\RegistersUsers;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Controllers\Auth\RegistersController;
+
 
 class ProfileController extends Controller
 {

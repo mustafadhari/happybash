@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
     public function index()
     {
         $users = User::all();
-        return view('users.index', ['users' => $users]);
+        return view('account.index', ['account' => $users]);
     }
 
     public function create()
@@ -76,9 +77,22 @@ class UserController extends Controller
             'password' => 'sometimes|min:8',
         ]);
 
+        // Check if a new password was provided and hash it
+        if (!empty($validatedData['password'])) {
+            $validatedData['password'] = Hash::make($validatedData['password']);
+        }
+
         // Update the user's profile
         $user->update($validatedData);
 
         return response()->json(['message' => 'Profile updated successfully', 'user' => $user]);
+    }
+
+    public function showAccount()
+    {
+        dd('Route is hitting here');
+        $user = auth()->user();
+        dd($user);
+        return view('account', compact('user'));
     }
 }

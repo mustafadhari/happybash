@@ -5,7 +5,7 @@
 @section('css')
     <!-- extra css -->
     <!--Swiper slider css-->
-    <link href="{{ URL::asset('libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ URL::asset('build/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('content')
     
@@ -31,32 +31,32 @@
                         <div class="row justify-content-center">
                             <div class="col-xxl-2 col-lg-3 col-sm-6">
                                 <div class="px-4 m-2">
-                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Shopify"><img src="{{ URL::asset('images/clients/shopify.svg') }}" alt="" height="28"></a>
+                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Shopify"><img src="{{ URL::asset('build/images/clients/shopify.svg') }}" alt="" height="28"></a>
                                 </div>
                             </div><!--end col-->
                             <div class="col-xxl-2 col-lg-3 col-sm-6">
                                 <div class="px-4 m-2">
-                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Google"><img src="{{ URL::asset('images/clients/google.svg') }}" alt="" height="28"></a>
+                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Google"><img src="{{ URL::asset('build/images/clients/google.svg') }}" alt="" height="28"></a>
                                 </div>
                             </div><!--end col-->
                             <div class="col-xxl-2 col-lg-3 col-sm-6">
                                 <div class="px-4 m-2">
-                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="PayPal"><img src="{{ URL::asset('images/clients/paypal.svg') }}" alt="" height="28"></a>
+                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="PayPal"><img src="{{ URL::asset('build/images/clients/paypal.svg') }}" alt="" height="28"></a>
                                 </div>
                             </div><!--end col-->
                             <div class="col-xxl-2 col-lg-3 col-sm-6">
                                 <div class="px-4 m-2">
-                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Amazon"><img src="{{ URL::asset('images/clients/amazon.svg') }}" alt="" height="28"></a>
+                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Amazon"><img src="{{ URL::asset('build/images/clients/amazon.svg') }}" alt="" height="28"></a>
                                 </div>
                             </div><!--end col-->
                             <div class="col-xxl-2 col-lg-3 col-sm-6">
                                 <div class="px-4 m-2">
-                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Walmart"><img src="{{ URL::asset('images/clients/walmart.svg') }}" alt="" height="28"></a>
+                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Walmart"><img src="{{ URL::asset('build/images/clients/walmart.svg') }}" alt="" height="28"></a>
                                 </div>
                             </div><!--end col-->
                             <div class="col-xxl-2 col-lg-3 col-sm-6">
                                 <div class="px-4 m-2">
-                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Verizon"><img src="{{ URL::asset('images/clients/verizon.svg') }}" alt="" height="28"></a>
+                                    <a href="#!" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Verizon"><img src="{{ URL::asset('build/images/clients/verizon.svg') }}" alt="" height="28"></a>
                                 </div>
                             </div><!--end col-->
                         </div><!--end row-->
@@ -79,7 +79,7 @@
                         <div class="card card-animate watch-category-widgets">
                             <div class="card-body p-2">
                                 <div class="bg-light">
-                                    <img src="{{ URL::asset('images/watch/products/img-07.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-07.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="category-btn mx-3 pb-3">
                                     <a href="#!" class="btn btn-danger stretched-link w-100">Fancy Watches</a>
@@ -91,7 +91,7 @@
                         <div class="card card-animate watch-category-widgets">
                             <div class="card-body p-2">
                                 <div class="bg-light">
-                                    <img src="{{ URL::asset('images/watch/products/img-01.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-01.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="category-btn mx-3 pb-3">
                                     <a href="#!" class="btn btn-danger stretched-link w-100">Women's Watches</a>
@@ -103,7 +103,7 @@
                         <div class="card card-animate watch-category-widgets">
                             <div class="card-body p-2">
                                 <div class="bg-light">
-                                    <img src="{{ URL::asset('images/watch/products/img-04.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-04.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="category-btn mx-3 pb-3">
                                     <a href="#!" class="btn btn-danger stretched-link w-100">Men's Watches</a>
@@ -115,7 +115,7 @@
                         <div class="card card-animate watch-category-widgets">
                             <div class="card-body p-2">
                                 <div class="bg-light">
-                                    <img src="{{ URL::asset('images/watch/products/img-06.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-06.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="category-btn mx-3 pb-3">
                                     <a href="#!" class="btn btn-danger stretched-link w-100">Smartwatch's</a>
@@ -167,7 +167,7 @@
                     </div><!--end col-->
                     <div class="col-xxl-6 ms-auto">
                         <div class="about-watch text-center">
-                            <img src="{{ URL::asset('images/watch/products/img-05.png') }}" alt="">
+                            <img src="{{ URL::asset('build/images/watch/products/img-05.png') }}" alt="">
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
@@ -193,7 +193,7 @@
         <div class="container video-card">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <img src="{{ URL::asset('images/watch/video-img.jpg') }}" alt="" class="img-fluid object-fit-cover rounded-4">
+                    <img src="{{ URL::asset('build/images/watch/video-img.jpg') }}" alt="" class="img-fluid object-fit-cover rounded-4">
 
                     <div class="video-main">
                         <div class="promo-video">
@@ -225,7 +225,7 @@
                             <span class="badge bg-danger-subtle text-danger fs-12 position-absolute top-0 end-0 start-0 rounded-bottom-0">Sale up to 30%</span>
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-01.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-01.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">New Stylish men's wrist watch</a></h6>
                                         <p class="mb-0 fs-16">$241.99 <small class="text-decoration-line-through fs-13 text-muted">328.19</small></p>
@@ -249,7 +249,7 @@
                         <div class="card watch-product text-center border-0 card-animate overflow-hidden">
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-02.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-02.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">Full Black Fancy Watch</a></h6>
                                         <p class="mb-0 fs-16">$179.65</p>
@@ -273,7 +273,7 @@
                         <div class="card watch-product text-center border-0 card-animate overflow-hidden">
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-03.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-03.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">Limited Edition Watch For Men</a></h6>
                                         <p class="mb-0 fs-16">$349.49</p>
@@ -297,7 +297,7 @@
                         <div class="card watch-product text-center border-0 card-animate overflow-hidden">
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-04.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-04.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">Timer Furious Casual Analog Watch</a></h6>
                                         <p class="mb-0 fs-16">$197.45</p>
@@ -321,7 +321,7 @@
                         <div class="card watch-product text-center border-0 card-animate overflow-hidden">
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-06.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-06.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">Fire-boltt Ninja Pro Max Smartwatch</a></h6>
                                         <p class="mb-0 fs-16">$179.37</p>
@@ -346,7 +346,7 @@
                             <span class="badge bg-danger-subtle text-danger fs-12 position-absolute top-0 end-0 start-0 rounded-bottom-0">Sale up to 15%</span>
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-07.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-07.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">Swiss Track Analog Watch</a></h6>
                                         <p class="mb-0 fs-16">$209.49 <small class="text-decoration-line-through fs-13 text-muted">349.99</small></p>
@@ -370,7 +370,7 @@
                         <div class="card watch-product text-center border-0 card-animate overflow-hidden">
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-08.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-08.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">Digital Watch in shoppry Mego</a></h6>
                                         <p class="mb-0 fs-16">$147.32</p>
@@ -394,7 +394,7 @@
                         <div class="card watch-product text-center border-0 card-animate overflow-hidden">
                             <div class="card-body pt-4">
                                 <div class="pt-2">
-                                    <img src="{{ URL::asset('images/watch/products/img-09.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ URL::asset('build/images/watch/products/img-09.png') }}" alt="" class="img-fluid">
                                     <div class="mt-4">
                                         <h6 class="fs-15 text-capitalize text-truncate"><a href="#!" class="text-reset">Swiss Track Analog Watch</a></h6>
                                         <p class="mb-0 fs-16">$357.48</p>
@@ -448,7 +448,7 @@
                                             <p class="fs-16 text-muted mb-4">" Great job on the <b>code quality</b>! Your attention to detail and dedication to producing clean, well-structured, and efficient code is impressive. Keep up the excellent work! "</p>
                                             <div class="d-flex gap-3">
                                                 <div class="flex-shrink-0">
-                                                    <img src="{{ URL::asset('images/users/avatar-1.jpg') }}" alt="" class="avatar-sm rounded">
+                                                    <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt="" class="avatar-sm rounded">
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <a href="#!">
@@ -475,7 +475,7 @@
                                             <p class="text-muted fs-16 mb-4">" Awesome! It is a high quality HTML template, I suggest two things, please add Angular version as Default with HTML version and Please try to add LMS part. Thanks "</p>
                                             <div class="d-flex gap-3">
                                                 <div class="flex-shrink-0">
-                                                    <img src="{{ URL::asset('images/users/avatar-2.jpg') }}" alt="" class="avatar-sm rounded">
+                                                    <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt="" class="avatar-sm rounded">
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <a href="#!">
@@ -502,7 +502,7 @@
                                             <p class="text-muted fs-16 mb-4">" High theme quality. Very good support, they spent almost an hour remotely to fix a problem. I hope this theme will have a long term support. Great Admin template comes in handy... :) "</p>
                                             <div class="d-flex gap-3">
                                                 <div class="flex-shrink-0">
-                                                    <img src="{{ URL::asset('images/users/avatar-3.jpg') }}" alt="" class="avatar-sm rounded">
+                                                    <img src="{{ URL::asset('build/images/users/avatar-3.jpg') }}" alt="" class="avatar-sm rounded">
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <a href="#!">
@@ -529,7 +529,7 @@
                                             <p class="text-muted fs-16 mb-4">" Hello everyone, I would like to suggest here two contents that you could create. Course pages and blog pages. In them you could insert the listing and management of courses. "</p>
                                             <div class="d-flex gap-3">
                                                 <div class="flex-shrink-0">
-                                                    <img src="{{ URL::asset('images/users/avatar-4.jpg') }}" alt="" class="avatar-sm rounded">
+                                                    <img src="{{ URL::asset('build/images/users/avatar-4.jpg') }}" alt="" class="avatar-sm rounded">
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <a href="#!">
@@ -556,7 +556,7 @@
                                             <p class="text-muted fs-16 mb-4">" Thank you for supporting CakePHP 4, we have purchased the template because of this support, please push forward more integration. The template is very complete as an admin panel. "</p>
                                             <div class="d-flex gap-3">
                                                 <div class="flex-shrink-0">
-                                                    <img src="{{ URL::asset('images/users/avatar-6.jpg') }}" alt="" class="avatar-sm rounded">
+                                                    <img src="{{ URL::asset('build/images/users/avatar-6.jpg') }}" alt="" class="avatar-sm rounded">
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <a href="#!">
@@ -594,7 +594,7 @@
                             <a href="#!" class="btn btn-light btn-icon btn-sm rounded-circle position-absolute bottom-0 end-0 m-3" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-title="Women Fashion" data-bs-content="One or two brand names can look classy, but too many can detract from the sophistication you're going for.">
                                 <i class="ph-plus-bold"></i>
                             </a>
-                            <img src="{{ URL::asset('images/instgram/img-01.jpg') }}" alt="" class="img-fluid rounded">
+                            <img src="{{ URL::asset('build/images/instgram/img-01.jpg') }}" alt="" class="img-fluid rounded">
                         </div>
                     </div><!--end col-->
                     <div class="col-xxl-2 col-lg-3 col-md-6">
@@ -602,7 +602,7 @@
                             <a href="#!" class="btn btn-light btn-icon btn-sm rounded-circle position-absolute bottom-0 end-0 m-3" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-title="Unique Fashion" data-bs-content="A capsule collection is essentially a condensed version of a designer's vision">
                                 <i class="ph-plus-bold"></i>
                             </a>
-                            <img src="{{ URL::asset('images/instgram/img-02.jpg') }}" alt="" class="img-fluid rounded">
+                            <img src="{{ URL::asset('build/images/instgram/img-02.jpg') }}" alt="" class="img-fluid rounded">
                         </div>
                     </div><!--end col-->
                     <div class="col-xxl-2 col-lg-3 col-md-6">
@@ -610,7 +610,7 @@
                             <a href="#!" class="btn btn-light btn-icon btn-sm rounded-circle position-absolute bottom-0 end-0 m-3" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-title="Men'swear" data-bs-content="Yours may consist of traditional pieces, such as tops, bottoms, and outerwear, or focus on a single product">
                                 <i class="ph-plus-bold"></i>
                             </a>
-                            <img src="{{ URL::asset('images/instgram/img-03.jpg') }}" alt="" class="img-fluid rounded">
+                            <img src="{{ URL::asset('build/images/instgram/img-03.jpg') }}" alt="" class="img-fluid rounded">
                         </div>
                     </div><!--end col-->
                     <div class="col-xxl-2 col-lg-3 col-md-6 d-none d-xxl-block">
@@ -618,7 +618,7 @@
                             <a href="#!" class="btn btn-light btn-icon btn-sm rounded-circle position-absolute bottom-0 end-0 m-3" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-title="Sportwear" data-bs-content="Typical sport-specific garments include tracksuits, shorts, T-shirts and polo shirts.">
                                 <i class="ph-plus-bold"></i>
                             </a>
-                            <img src="{{ URL::asset('images/instgram/img-04.jpg') }}" alt="" class="img-fluid rounded">
+                            <img src="{{ URL::asset('build/images/instgram/img-04.jpg') }}" alt="" class="img-fluid rounded">
                         </div>
                     </div><!--end col-->
                     <div class="col-xxl-2 col-lg-3 col-md-6">
@@ -626,7 +626,7 @@
                             <a href="#!" class="btn btn-light btn-icon btn-sm rounded-circle position-absolute bottom-0 end-0 m-3" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-title="Women Fashion" data-bs-content="One or two brand names can look classy, but too many can detract from the sophistication you're going for.">
                                 <i class="ph-plus-bold"></i>
                             </a>
-                            <img src="{{ URL::asset('images/instgram/img-05.jpg') }}" alt="" class="img-fluid rounded">
+                            <img src="{{ URL::asset('build/images/instgram/img-05.jpg') }}" alt="" class="img-fluid rounded">
                         </div>
                     </div><!--end col-->
                     <div class="col-xxl-2 col-lg-3 col-md-6">
@@ -634,7 +634,7 @@
                             <a href="#!" class="btn btn-light btn-icon btn-sm rounded-circle position-absolute bottom-0 end-0 m-3" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-title="Footwear" data-bs-content="Footwear refers to garments worn on the feet, which typically serves the purpose of protection against adversities.">
                                 <i class="ph-plus-bold"></i>
                             </a>
-                            <img src="{{ URL::asset('images/instgram/img-06.jpg') }}" alt="" class="img-fluid rounded">
+                            <img src="{{ URL::asset('build/images/instgram/img-06.jpg') }}" alt="" class="img-fluid rounded">
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
@@ -648,7 +648,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="d-flex align-items-center gap-3">
                             <div class="flex-shrink-0">
-                                <img src="{{ URL::asset('images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
+                                <img src="{{ URL::asset('build/images/ecommerce/fast-delivery.png') }}" alt="" class="avatar-sm">
                             </div>
                             <div class="flex-grow-1">
                                 <h5 class="fs-15">Fast &amp; Secure Delivery</h5>
@@ -659,7 +659,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="d-flex align-items-center gap-3">
                             <div class="flex-shrink-0">
-                                <img src="{{ URL::asset('images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
+                                <img src="{{ URL::asset('build/images/ecommerce/returns.png') }}" alt="" class="avatar-sm">
                             </div>
                             <div class="flex-grow-1">
                                 <h5 class="fs-15">2 Days Return Policy</h5>
@@ -670,7 +670,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="d-flex align-items-center gap-3">
                             <div class="flex-shrink-0">
-                                <img src="{{ URL::asset('images/ecommerce/guarantee-certificate.png') }}" alt="" class="avatar-sm">
+                                <img src="{{ URL::asset('build/images/ecommerce/guarantee-certificate.png') }}" alt="" class="avatar-sm">
                             </div>
                             <div class="flex-grow-1">
                                 <h5 class="fs-15">Money Back Guarantee</h5>
@@ -681,7 +681,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="d-flex align-items-center gap-3">
                             <div class="flex-shrink-0">
-                                <img src="{{ URL::asset('images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
+                                <img src="{{ URL::asset('build/images/ecommerce/24-hours-support.png') }}" alt="" class="avatar-sm">
                             </div>
                             <div class="flex-grow-1">
                                 <h5 class="fs-15">24 X 7 Service</h5>
@@ -709,9 +709,9 @@
 @section('scripts')
 
     <!--Swiper slider js-->
-    <script src="{{ URL::asset('libs/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ URL::asset('build/libs/swiper/swiper-bundle.min.js') }}"></script>
 
-    <script src="{{ URL::asset('js/frontend/watch-demo.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/watch-demo.init.js') }}"></script>
 
-    <script src="{{ URL::asset('js/frontend/menu.init.js') }}"></script>
+    <script src="{{ URL::asset('build/js/frontend/menu.init.js') }}"></script>
 @endsection

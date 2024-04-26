@@ -17,18 +17,20 @@ class SubcategoryController extends Controller
         if (!$category) {
             throw new NotFoundHttpException('Category not found');
         }
-
         // Fetch subcategories associated with the category
         $subcategories = $category->subcategories()->get();
 
         return response()->json($subcategories);
     }
+    
 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            // Other validations as necessary
+            'category_id' => 'required|string',
+            'name' => 'required|max:255',
+            'images' => 'sometimes|array',
+            'images.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $subcategory = SubCategory::create($validatedData);
@@ -50,8 +52,10 @@ class SubcategoryController extends Controller
         $subcategory = SubCategory::findOrFail($subcategoryId);
 
         $validatedData = $request->validate([
-            'name' => 'sometimes|required|string|max:255',
-            // Other validations as necessary
+            'category_id' => 'required|string',
+            'name' => 'sometimes|max:255',
+            'images' => 'sometimes|array',
+            'images.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $subcategory->update($validatedData);

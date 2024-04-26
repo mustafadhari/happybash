@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="footer-info">
-                    <img src="{{ URL::asset('images/logo-light.png') }}" alt="" height="28" class="logo-light">
-                    <img src="{{ URL::asset('images/logo-dark.png') }}" alt="" height="28" class="logo-dark">
+                    <img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="88" class="logo-light">
+                    <img src="{{ URL::asset('build/images/hb-logo.png') }}" alt="" height="88" class="logo-dark">
                     <p class="footer-desc mt-4 mb-2 me-3">Toner provides best fashion experience for both men and women at best pricing. We follow New fashion approach to give best premium feel.</p>
 
                     <div class="footer-social mt-4">
@@ -89,16 +89,16 @@
                 <div class="text-sm-end d-none d-sm-block">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href="#!"><img src="{{ URL::asset('images/ecommerce/payment/visa.png') }}" alt="" height="30"></a>
+                            <a href="#!"><img src="{{ URL::asset('build/images/ecommerce/payment/visa.png') }}" alt="" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!"><img src="{{ URL::asset('images/ecommerce/payment/discover.png') }}" alt="" height="30"></a>
+                            <a href="#!"><img src="{{ URL::asset('build/images/ecommerce/payment/discover.png') }}" alt="" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!"><img src="{{ URL::asset('images/ecommerce/payment/american-express.png') }}" alt="" height="30"></a>
+                            <a href="#!"><img src="{{ URL::asset('build/images/ecommerce/payment/american-express.png') }}" alt="" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!"><img src="{{ URL::asset('images/ecommerce/payment/paypal.png') }}" alt="" height="30"></a>
+                            <a href="#!"><img src="{{ URL::asset('build/images/ecommerce/payment/paypal.png') }}" alt="" height="30"></a>
                         </li>
                     </ul>
                 </div>
