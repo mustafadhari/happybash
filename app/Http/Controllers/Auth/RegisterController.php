@@ -126,7 +126,7 @@ class RegisterController extends Controller
             ->create($mobile, "sms", ["locale" => "en"]);
             
         // Store OTP in session for later verification
-        session(['otp' => $otp]);
+        //session(['otp' => $otp]);
     }
 
     // Method for OTP verification
@@ -156,7 +156,7 @@ class RegisterController extends Controller
                     return response()->json(['message' => 'OTP verified successfully']);
                 } else {
                     // Web app, redirect to the appropriate page
-                    return redirect()->route('finalize-registration-form');
+                    //return redirect()->route('finalize-registration-form');
                 }
             } else {
                 if ($request->expectsJson()) {
