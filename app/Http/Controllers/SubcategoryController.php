@@ -12,15 +12,25 @@ class SubcategoryController extends Controller
 {
     public function index($category_id)
     {
-        // Check if the category exists
         $category = Category::find($category_id);
+
         if (!$category) {
             throw new NotFoundHttpException('Category not found');
         }
-        // Fetch subcategories associated with the category
-        $subcategories = $category->subcategories()->get();
 
-        return response()->json($subcategories);
+        $subcategories = $category->subcategories()->with('images')->get();
+
+        $formattedSubcategories = $subcategories->map(function ($subcategory) {
+            return [
+                'id' => $subcategory->id,
+                'name' => $subcategory->name,
+                'image_url' => $subcategory->images->isNotEmpty() ? $subcategory->images->first()->image_url : null,
+                'created_at' => $subcategory->created_at,
+                'updated_at' => $subcategory->updated_at,
+            ];
+        });
+
+        return response()->json($formattedSubcategories);
     }
     
 
