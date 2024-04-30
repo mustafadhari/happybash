@@ -11,8 +11,19 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
-        return response()->json($categories);
+        $categories = Category::with('images')->get();
+
+        $formattedCategories = $categories->map(function ($category) {
+            return [
+                'id' => $category->id,
+                'name' => $category->name,
+                'image_url' => $category->images->isNotEmpty() ? $category->images->first()->image_url : null,
+                'created_at' => $category->created_at,
+                'updated_at' => $category->updated_at,
+            ];
+        });
+
+        return response()->json($formattedCategories);
     }
 
     public function showCategories()
@@ -61,16 +72,16 @@ class CategoryController extends Controller
         ]);
 
         $category->update($validatedData);
-
+        
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $path = $image->store('category_images', 'public');
                 $url = Storage::disk('public')->url($path);
-
-                $category->images()->update(['image_url' => $url]);
+                
+                $category->images()->create(['image_url' => $url]);
             }
         }
-
         return response()->json($category);
+
     }
 }
