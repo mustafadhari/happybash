@@ -131,8 +131,9 @@ class RegisterController extends Controller
 
     // Method for OTP verification
     public function verifyOTP(Request $request) {
-        $request->validate([
+        $validatedData = $request->validate([
             'otp' => 'required|digits:6',
+            'phone' => 'required',
         ]);
 
         $sid = env('TWILIO_SID');
@@ -145,8 +146,8 @@ class RegisterController extends Controller
             $verification = $twilio->verify->v2->services($twilio_verify_sid)
                 ->verificationChecks
                 ->create([
-                    'to' => session('phone'), // The phone number
-                    'code' => $request->otp, // The OTP entered by the user
+                    'to' => $validatedData['phone'], // The phone number
+                    'code' => $validatedData['otp'], // The OTP entered by the user
                 ]);
 
             if ($verification->valid) {
