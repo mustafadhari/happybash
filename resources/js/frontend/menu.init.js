@@ -203,7 +203,7 @@ function isCustomDropdown() {
         var shippingRate = 65.00;
         var discountRate = 0.15;
 
-        var currencySign = "$";
+        var currencySign = "KD ";
         var cartList = document.querySelectorAll(".cartlist li").length;
         document.querySelectorAll(".cartitem-badge").forEach(function(item){
             item.innerHTML = cartList
