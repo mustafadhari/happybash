@@ -23,7 +23,11 @@ class CartController extends Controller
         ]);
 
         if (!$this->checkProductAvailabilityForRental($validated['product_id'], $validated['quantity'], $validated['start_date'], $validated['end_date'])) {
-            return response()->json(['message' => 'Product not available for the selected dates'], 422);
+            if ($request->wantsJson()) {
+                return response()->json(['message' => 'Product not available for the selected dates'], 422);
+            } else {
+                return back()->withErrors(['error' => 'Product not available for the selected dates']);
+            }
         }
 
         $cart = Cart::firstOrCreate(['user_id' => Auth::id()]);
@@ -32,7 +36,11 @@ class CartController extends Controller
             ['quantity' => $validated['quantity'], 'start_date' => $validated['start_date'], 'end_date' => $validated['end_date']]
         );
 
-        return response()->json(['message' => 'Item added to cart successfully', 'cartItem' => $cartItem]);
+        if ($request->wantsJson()) {
+            return response()->json(['message' => 'Item added to cart successfully', 'cartItem' => $cartItem]);
+        } else {
+            return redirect()->route('cart.show');
+        }
     }
 
     private function checkProductAvailabilityForRental($productId, $quantity, $startDate, $endDate)
@@ -73,10 +81,14 @@ class CartController extends Controller
         return response()->json(['message' => 'Item removed from cart']);
     }
 
-    public function viewCart()
+    public function viewCart(Request $request)
     {
-        $cart = Cart::with(['cartItems.product'])->where('user_id', Auth::id())->first();
-        return response()->json(['cart' => $cart]);
+        $cart = Cart::with(['cartItems.product'])->where('user_id', Auth::id())->firstOrFail();
+        if ($request->wantsJson()) {
+            return response()->json(['cart' => $cart]);
+        } else {
+            return view('shop-cart', ['cart' => $cart]);
+        }
     }
 
     public function checkout(Request $request)

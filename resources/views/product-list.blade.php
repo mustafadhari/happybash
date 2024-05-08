@@ -44,7 +44,7 @@
                         </div>
                         <div class="content mx-4 pt-5">
                             <div class="card border-0 p-4 position-relative rounded-3 shadow-lg">
-                                <a href="#!">
+                                <a href="{{ route('product-details', $product->id) }}">
                                     <h6 class="text-capitalize fs-16 lh-base text-truncate">{{ $product->name }}</h6>
                                 </a>
                                 <p class="text-muted"><i class="ri-star-fill text-warning align-bottom"></i> <i

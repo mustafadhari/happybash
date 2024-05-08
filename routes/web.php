@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth404Controller;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/index', [HomeController::class, 'index'])->name('index');
     Route::get('/categories/{categoryId}/subcategories', [CategoryController::class, 'showSubcategories'])->name('subcategories.show');
     Route::get('/subcategories/{subcategoryId}/products', [ProductController::class, 'showProducts'])->name('product-list');
-    Route::get('/products/{productId}', [ProductController::class, 'show'])->name('product.details');
+    Route::get('/products/{productId}', [ProductController::class, 'show'])->name('product-details');
+    Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('cart.add');
+    Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.show');
     Route::get('logout', [HappyBashController::class, 'logout']);
 });
 Route::get('/home', [HomeController::class, 'index'])->name('home');

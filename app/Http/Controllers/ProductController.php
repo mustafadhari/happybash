@@ -30,7 +30,7 @@ class ProductController extends Controller
          if (request()->wantsJson()) {
                 return response()->json($product);
         } else {
-            return response()->view('products.details', ['product' => $product]);
+            return response()->view('product-details', ['product' => $product]);
         }
      }
 
