@@ -17,6 +17,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LabelTranslationController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishlistController;
 
 
 /*
@@ -84,6 +85,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/labels/{label_id}', [LabelTranslationController::class, 'get']);
     Route::put('/category/{category}', [CategoryController::class, 'update']);
     Route::put('/subcategory/{subcategory}', [SubcategoryController::class, 'update']);
+    Route::post('/wishlist/add/{productId}', [WishlistController::class, 'addToWishlist']);
+    Route::delete('/wishlist/remove/{productId}', [WishlistController::class, 'removeFromWishlist']);
+    Route::get('/wishlist', [WishlistController::class, 'getWishlist']);
     
 });
 

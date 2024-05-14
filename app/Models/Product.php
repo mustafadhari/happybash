@@ -36,4 +36,8 @@ class Product extends Model
     public function isAvailableForDates($startDate, $endDate) {
         // Implement availability logic
     }
+    public function wishlist()
+     {
+         return $this->hasOne(Wishlist::class);
+     }
 }
