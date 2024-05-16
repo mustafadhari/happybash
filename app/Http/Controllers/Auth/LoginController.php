@@ -71,7 +71,7 @@ class LoginController extends Controller
     public function sendOTP(Request $request) {
         $validatedData = $request->validate([
             'country_code' => 'required',
-            'phone' => 'required',
+            'phone' => 'required|unique:users',
         ]);
         //$countryCode = '+91';
         $fullMobileNumber = $validatedData['country_code'] . $validatedData['phone'];
