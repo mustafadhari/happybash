@@ -66,7 +66,7 @@ class UserController extends Controller
         $user = collect($user)->map(function ($value) {
             if (is_string($value)) {
                 return $value === null ? '' : $value;
-            } elseif (is_int($value)) {
+            } elseif (is_numeric($value)) {
                 return $value === null ? null : $value;
             } else {
                 return $value;
