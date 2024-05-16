@@ -71,21 +71,26 @@ class LoginController extends Controller
     public function sendOTP(Request $request) {
         $validatedData = $request->validate([
             'country_code' => 'required',
-            'phone' => 'required|unique:users',
+            'phone' => 'required',
         ]);
         //$countryCode = '+91';
         $fullMobileNumber = $validatedData['country_code'] . $validatedData['phone'];
-        $otp = rand(1000, 9999); // Generate OTP
-        $this->sendTwilioOTP($fullMobileNumber, $otp);
-
-        session(['otp' => $otp, 'phone' => $fullMobileNumber]); // Store OTP and mobile in session
-        // Check if the request expects a JSON response
-        if ($request->expectsJson()) {
-            // Return a JSON response
-            return response()->json(['message' => 'OTP sent successfully']);
+        $phoneExists = User::where('phone', $fullMobileNumber)->exists();
+        if ($phoneExists) {
+            $otp = rand(1000, 9999); // Generate OTP
+            $this->sendTwilioOTP($fullMobileNumber, $otp);
+    
+            session(['otp' => $otp, 'phone' => $fullMobileNumber]); // Store OTP and mobile in session
+            // Check if the request expects a JSON response
+            if ($request->expectsJson()) {
+                // Return a JSON response
+                return response()->json(['message' => 'OTP sent successfully']);
+            } else {
+                // Redirect to OTP verification view
+                return redirect()->route('verify');
+            }
         } else {
-            // Redirect to OTP verification view
-            return redirect()->route('verify');
+            return response()->json(['message' => 'Phone number already exists.']);
         }
     }
 
