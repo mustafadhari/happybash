@@ -63,6 +63,9 @@ class UserController extends Controller
     public function profile(Request $request)
     {
         $user = $request->user(); // Get the authenticated user
+        $user = collect($user)->map(function ($value) {
+            return $value === null ? '' : $value;
+        })->all();
         return response()->json($user);
     }
 
