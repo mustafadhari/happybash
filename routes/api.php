@@ -18,6 +18,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\LabelTranslationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\WaitlistController;
 
 
 /*
@@ -45,6 +46,11 @@ Route::post('/category', [CategoryController::class, 'store']);
 Route::post('/subcategory', [SubcategoryController::class, 'store']);
 Route::put('/category/{category}', [CategoryController::class, 'update']);
 Route::put('/subcategory/{subcategory}', [SubcategoryController::class, 'update']);
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/{product}', [ProductController::class, 'show']);
+Route::post('/products/{product}/availability', [AvailabilityController::class, 'checkAvailability']);
+Route::post('/labels', [LabelTranslationController::class, 'insert']);
+Route::get('/labels/{label_id}', [LabelTranslationController::class, 'get']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -63,12 +69,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/addresses', [AddressController::class, 'store']);
     Route::put('/addresses/{address}', [AddressController::class, 'update']);
     Route::delete('/addresses/{address}', [AddressController::class, 'destroy']);
-    Route::get('/products', [ProductController::class, 'index']);
-    Route::get('/products/{product}', [ProductController::class, 'show']);
     Route::post('/products', [ProductController::class, 'store']);
     Route::put('/products/{product}', [ProductController::class, 'update']);
     Route::delete('/products/{product}', [ProductController::class, 'destroy']);
-    Route::post('/products/{product}/availability', [AvailabilityController::class, 'checkAvailability']);
     Route::get('/bookings', [BookingController::class, 'index']); // List all bookings
     Route::post('/bookings', [BookingController::class, 'store']); // Create a new booking
     Route::get('/bookings/{booking}', [BookingController::class, 'show']); // Show a specific booking
@@ -81,13 +84,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/cart/item/{cartItem}', [CartController::class, 'removeCartItem']);
     Route::get('/cart', [CartController::class, 'viewCart']);
     Route::post('/cart/checkout', [CartController::class, 'checkout'])->middleware('auth:sanctum');
-    Route::post('/labels', [LabelTranslationController::class, 'insert']);
-    Route::get('/labels/{label_id}', [LabelTranslationController::class, 'get']);
     Route::put('/category/{category}', [CategoryController::class, 'update']);
     Route::put('/subcategory/{subcategory}', [SubcategoryController::class, 'update']);
     Route::post('/wishlist/add/{productId}', [WishlistController::class, 'addToWishlist']);
     Route::delete('/wishlist/remove/{productId}', [WishlistController::class, 'removeFromWishlist']);
     Route::get('/wishlist', [WishlistController::class, 'getWishlist']);
+    Route::post('/waitlist/add/{productId}', [WaitlistController::class, 'addToWaitlist']);
+    Route::delete('/waitlist/remove/{productId}', [WaitlistController::class, 'removeFromWaitlist']);
+    Route::get('/waitlist', [WaitlistController::class, 'getWaitlist']);
     
 });
 
