@@ -67,7 +67,7 @@ class UserController extends Controller
             if (is_string($value)) {
                 return $value === null ? '' : $value;
             } elseif (is_numeric($value)) {
-                return $value === null ? null : $value;
+                return $value === null ? null : (int)$value;
             } else {
                 return $value;
             }
