@@ -63,8 +63,8 @@ class UserController extends Controller
     public function profile(Request $request)
     {
         $user = $request->user(); // Get the authenticated user
-        $user = collect($user)->map(function ($value) {
-            if (is_string($value)) {
+        $user = collect($user)->map(function ($value, $key) {
+            if ($key === 'name') {
                 return $value === null ? '' : $value;
             } elseif (is_numeric($value)) {
                 return $value === null ? null : (int)$value;
