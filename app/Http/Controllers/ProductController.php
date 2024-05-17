@@ -10,9 +10,28 @@ use App\Models\Subcategory;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::with('subcategory', 'images')->get();
+        $query = Product::query();
+
+        // Filter by subcategory_id
+        if ($request->has('subcategory_id')) {
+            $query->where('subcategory_id', $request->subcategory_id);
+        }
+
+        // Filter by start and end date availability
+        if ($request->has('start_date') && $request->has('end_date')) {
+            $query->whereDate('availability_start_date', '<=', $request->start_date)
+                ->whereDate('availability_end_date', '>=', $request->end_date);
+        }
+
+        // Filter by location_id
+        if ($request->has('location_id')) {
+            $query->where('location_id', $request->location_id);
+        }
+
+        $products = $query->with('subcategory', 'images')->get();
+
         return response()->json($products);
     }
 
