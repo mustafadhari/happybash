@@ -16,18 +16,18 @@ class ProductController extends Controller
 
         // Filter by subcategory_id
         if ($request->has('subcategory_id')) {
-            $query->where('subcategory_id', $request->subcategory_id);
+            $query->where('subcategory_id', $request->input('subcategory_id'));
         }
 
         // Filter by start and end date availability
         if ($request->has('start_date') && $request->has('end_date')) {
-            $query->whereDate('availability_start_date', '<=', $request->start_date)
-                ->whereDate('availability_end_date', '>=', $request->end_date);
+            $query->whereDate('availability_start_date', '<=', $request->input('start_date'))
+                ->whereDate('availability_end_date', '>=', $request->input('end_date'));
         }
 
         // Filter by location_id
         if ($request->has('location_id')) {
-            $query->where('location_id', $request->location_id);
+            $query->where('location_id', $request->input('location_id'));
         }
 
         $products = $query->with('subcategory', 'images')->get();
@@ -64,8 +64,8 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
-            'description' => 'required',
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
             'available_quantity' => 'required|integer|min:0',
             'subcategory_id' => 'required|exists:subcategories,id',
             'price_per_day' => 'required|numeric|min:0',
@@ -96,8 +96,11 @@ class ProductController extends Controller
                 $product->images()->create(['image_url' => $url]);
             }
         }
-
-        return response()->json($product, 201);
+        // Encode the data to JSON with options to prevent escaping
+        $jsonResponse = json_encode($product, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        // Return the JSON response with the appropriate headers
+        return response($jsonResponse)->header('Content-Type', 'application/json');
+        //return response()->json($product, 201);
     }
 
     /**
