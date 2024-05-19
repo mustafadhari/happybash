@@ -83,7 +83,10 @@ class CartController extends Controller
 
     public function viewCart(Request $request)
     {
-        $cart = Cart::with(['cartItems.product'])->where('user_id', Auth::id())->firstOrFail();
+        $cart = Cart::with(['cartItems.product.images' => function ($query) {
+            $query->take(1); // Retrieve only the first image
+        }])->where('user_id', Auth::id())->firstOrFail();
+
         if ($request->wantsJson()) {
             return response()->json(['cart' => $cart]);
         } else {
