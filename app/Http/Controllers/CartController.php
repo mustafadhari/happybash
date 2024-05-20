@@ -113,6 +113,11 @@ class CartController extends Controller
         $startDate = $cart->cartItems->min('start_date');
         $endDate = $cart->cartItems->max('end_date');
 
+        // Validate the request to ensure the address_id is provided
+        $validated = $request->validate([
+            'address_id' => 'required|exists:addresses,id',
+        ]);
+
         // Initialize a variable to store the total price of the booking
         $totalPrice = 0;
 
@@ -130,6 +135,7 @@ class CartController extends Controller
         // Create booking
         $booking = new Booking([
             'user_id' => $user->id,
+            'address_id' => $validated['address_id'], // Use the provided address_id
             'start_datetime' => $startDate,
             'end_datetime' => $endDate,
             'status' => 'confirmed', // Assuming you have a status field to track booking status
