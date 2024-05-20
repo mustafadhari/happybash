@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Address;
 
 class Booking extends Model
 {
@@ -27,6 +28,11 @@ class Booking extends Model
 
     public function addons() {
         return $this->belongsToMany(Addon::class);
+    }
+
+    public function address()
+    {
+        return $this->belongsTo(Address::class);
     }
 
     public function calculateTotalPrice() {

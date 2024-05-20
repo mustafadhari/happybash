@@ -20,6 +20,7 @@ class BookingController extends Controller
             'addons' => 'sometimes|array',
             'start_datetime' => 'required|date',
             'end_datetime' => 'required|date|after:start_datetime',
+            'address_id' => 'required|exists:addresses,id',
         ]);
 
         $totalPrice = $this->calculateTotalPrice($validatedData, $validatedData['start_datetime'], $validatedData['end_datetime']);

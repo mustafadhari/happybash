@@ -87,6 +87,13 @@ class CartController extends Controller
             $query->take(1); // Retrieve only the first image
         }])->where('user_id', Auth::id())->firstOrFail();
 
+        // Loop through each cart item and load the first image for each product
+        $cart->cartItems->each(function ($cartItem) {
+            $cartItem->product->load(['images' => function ($query) {
+                $query->take(1); // Retrieve only the first image
+            }]);
+        });
+
         if ($request->wantsJson()) {
             return response()->json(['cart' => $cart]);
         } else {
