@@ -28,8 +28,10 @@ class WaitlistController extends Controller
     }
 
     public function getWaitlist() {
-        $waitlist = Waitlist::where('user_id', auth()->id())->get(); // Assuming user is authenticated
-
+        $waitlist = Waitlist::where('user_id', auth()->id())
+            ->with('product:name,price_per_day,images') // Eager load product details
+            ->get();
+    
         return response()->json($waitlist);
     }
 }
