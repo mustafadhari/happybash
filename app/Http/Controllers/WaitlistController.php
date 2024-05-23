@@ -29,7 +29,10 @@ class WaitlistController extends Controller
 
     public function getWaitlist() {
         $waitlist = Waitlist::where('user_id', auth()->id())
-            ->with('product:name,price_per_day,images') // Eager load product details
+            ->with(['product' => function ($query) {
+                $query->select('id', 'name', 'price_per_day'); // Select specific columns from products table
+                $query->with('images:url,alt_text'); // Eager load images relationship with specific attributes
+            }])
             ->get();
     
         return response()->json($waitlist);
