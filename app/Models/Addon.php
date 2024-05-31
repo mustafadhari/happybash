@@ -25,4 +25,9 @@ class Addon extends Model
     {
         return $this->belongsToMany(Service::class)->withPivot('quantity');
     }
+    
+    public function bookings()
+    {
+        return $this->belongsToMany(Booking::class, 'booking_addon');
+    }
 }

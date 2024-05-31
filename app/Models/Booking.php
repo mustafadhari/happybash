@@ -27,7 +27,7 @@ class Booking extends Model
     }
 
     public function addons() {
-        return $this->belongsToMany(Addon::class);
+        return $this->belongsToMany(Addon::class, 'booking_addon');
     }
 
     public function address()
