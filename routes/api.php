@@ -62,6 +62,8 @@ Route::apiResource('locations', LocationController::class);
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user/profile', [UserController::class, 'profile']);
     Route::patch('/user/profile', [UserController::class, 'updateProfile']);
+    Route::post('/user/request-otp', [UserController::class, 'requestOtpForMobileChange']);
+    Route::post('/user/verify-otp', [UserController::class, 'verifyOtpAndUpdateMobile']);
     //Route::get('/locations', [LocationController::class, 'index']);
     Route::get('/user/location', [UserLocationController::class, 'show']);
     Route::put('/user/location', [UserLocationController::class, 'update']);
