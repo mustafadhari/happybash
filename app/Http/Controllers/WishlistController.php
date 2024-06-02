@@ -9,20 +9,29 @@ class WishlistController extends Controller
 {
     //
     public function addToWishlist($productId) {
-        // Logic to add product to wishlist
-        $wishlist = Wishlist::create(['product_id' => $productId]);
+        $wishlist = Wishlist::create([
+            'product_id' => $productId,
+            'user_id' => auth()->id() // Ensure the user is authenticated
+        ]);
         return response()->json($wishlist, 201);
     }
 
     public function removeFromWishlist($productId) {
-        // Logic to remove product from wishlist
-        Wishlist::where('product_id', $productId)->delete();
+        Wishlist::where('product_id', $productId)
+                ->where('user_id', auth()->id()) // Ensure it's the user's wishlist item
+                ->delete();
         return response()->json(['message' => 'Product removed from wishlist']);
     }
 
     public function getWishlist() {
-        // Logic to retrieve wishlist items
-        $wishlist = Wishlist::all();
+        $wishlist = Wishlist::where('user_id', auth()->id())
+            ->with(['product' => function ($query) {
+                $query->select('id', 'name', 'price_per_day'); 
+                $query->with(['images' => function ($query) {
+                    $query->select('product_id', 'image_url'); 
+                }]);
+            }])->get();
+    
         return response()->json($wishlist);
     }
 }
