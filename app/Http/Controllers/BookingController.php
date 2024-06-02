@@ -146,7 +146,27 @@ class BookingController extends Controller
             return response()->json(['message' => 'Not authenticated'], 401);
         }
 
-        $bookings = Booking::where('user_id', $user->id)->with(['products', 'services', 'addons'])->get();
+        $bookings = Booking::where('user_id', $user->id)
+            ->with(['products' => function ($query) {
+                $query->select('products.id', 'products.name', 'products.price_per_day') // Specify the table name for 'id'
+                    ->with(['images' => function ($query) {
+                        $query->select('product_id', 'image_url'); // Assuming 'image_url' is the field for the image
+                    }]);
+            }, 'services', 'addons'])
+            ->get(['bookings.id', 'start_datetime', 'end_datetime', 'price as total_booking_amount']); // Specify the table name for 'id'
+
+        // Enhance the structure of the response to include necessary details
+        $bookings = $bookings->map(function ($booking) {
+            $booking->start_datetime = Carbon::parse($booking->start_datetime)->format('Y-m-d');
+            $booking->end_datetime = Carbon::parse($booking->end_datetime)->format('Y-m-d');
+
+            $booking->products->map(function ($product) {
+                $product->image = $product->images->first()->image_url ?? null; // Assuming there is at least one image
+                unset($product->images); // Remove the images collection if not needed further
+                return $product;
+            });
+            return $booking;
+        });
 
         return response()->json($bookings);
     }
