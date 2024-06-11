@@ -20,6 +20,8 @@ class CartController extends Controller
             'quantity' => 'required|integer|min:1',
             'start_date' => 'required|date',
             'end_date' => 'required|date|after:start_date',
+            'start_time' => 'required|date_format:H:i', // Validate time format (24-hour format)
+            'end_time' => 'required|date_format:H:i|after:start_time'
         ]);
 
         if (!$this->checkProductAvailabilityForRental($validated['product_id'], $validated['quantity'], $validated['start_date'], $validated['end_date'])) {
@@ -33,7 +35,13 @@ class CartController extends Controller
         $cart = Cart::firstOrCreate(['user_id' => Auth::id()]);
         $cartItem = $cart->cartItems()->updateOrCreate(
             ['product_id' => $validated['product_id']],
-            ['quantity' => $validated['quantity'], 'start_date' => $validated['start_date'], 'end_date' => $validated['end_date']]
+            [
+                'quantity' => $validated['quantity'],
+                'start_date' => $validated['start_date'],
+                'end_date' => $validated['end_date'],
+                'start_time' => $validated['start_time'], // Save start time
+                'end_time' => $validated['end_time'] // Save end time
+            ]
         );
 
         if ($request->wantsJson()) {
@@ -43,17 +51,24 @@ class CartController extends Controller
         }
     }
 
-    private function checkProductAvailabilityForRental($productId, $quantity, $startDate, $endDate)
+    private function checkProductAvailabilityForRental($productId, $quantity, $startDate, $endDate, $startTime, $endTime)
     {
+        $startDateTime = $startDate . ' ' . $startTime;
+        $endDateTime = $endDate . ' ' . $endTime;
+
         $bookedItems = Booking::whereHas('products', function ($query) use ($productId) {
             $query->where('products.id', $productId);
-        })->where(function ($query) use ($startDate, $endDate) {
-            $query->whereBetween('start_datetime', [$startDate, $endDate])
-                ->orWhereBetween('end_datetime', [$startDate, $endDate])
-                ->orWhere(function ($query) use ($startDate, $endDate) {
-                    $query->where('start_datetime', '<', $startDate)
-                            ->where('end_datetime', '>', $endDate);
-                });
+        })->where(function ($query) use ($startDateTime, $endDateTime) {
+            $query->where(function ($q) use ($startDateTime, $endDateTime) {
+                $q->where('start_datetime', '<=', $startDateTime)
+                ->where('end_datetime', '>=', $endDateTime);
+            })->orWhere(function ($q) use ($startDateTime, $endDateTime) {
+                $q->whereBetween('start_datetime', [$startDateTime, $endDateTime])
+                ->orWhereBetween('end_datetime', [$startDateTime, $endDateTime]);
+            })->orWhere(function ($q) use ($startDateTime, $endDateTime) {
+                $q->where('start_datetime', '<', $startDateTime)
+                ->where('end_datetime', '>', $endDateTime);
+            });
         })->count();
 
         return $bookedItems < $quantity;
@@ -65,13 +80,28 @@ class CartController extends Controller
             'quantity' => 'required|integer|min:1',
             'start_date' => 'required|date',
             'end_date' => 'required|date|after:start_date',
+            'start_time' => 'required|date_format:H:i', // Validate time format (24-hour format)
+            'end_time' => 'required|date_format:H:i|after:start_time' // Ensure end time is after start time
         ]);
 
-        if (!$this->checkProductAvailabilityForRental($cartItem->product_id, $validated['quantity'], $validated['start_date'], $validated['end_date'])) {
-            return response()->json(['message' => 'Product not available for the selected dates'], 422);
+        if (!$this->checkProductAvailabilityForRental(
+            $cartItem->product_id, 
+            $validated['quantity'], 
+            $validated['start_date'], 
+            $validated['end_date'],
+            $validated['start_time'], // Include start time in availability check
+            $validated['end_time']   // Include end time in availability check
+        )) {
+            return response()->json(['message' => 'Product not available for the selected dates and times'], 422);
         }
 
-        $cartItem->update($validated);
+        $cartItem->update([
+            'quantity' => $validated['quantity'],
+            'start_date' => $validated['start_date'],
+            'end_date' => $validated['end_date'],
+            'start_time' => $validated['start_time'],
+            'end_time' => $validated['end_time']
+        ]);
         return response()->json(['message' => 'Cart item updated successfully']);
     }
 
@@ -123,22 +153,30 @@ class CartController extends Controller
 
         // Check availability for all cart items
         foreach ($cart->cartItems as $item) {
-            if (!$this->checkProductAvailabilityForRental($item->product_id, $item->quantity, $startDate, $endDate)) {
-                return response()->json(['message' => "Product ID {$item->product_id} is not available for the selected dates"], 422);
+            $startDate = $item->start_date;
+            $endDate = $item->end_date;
+            $startTime = $item->start_time; // Assuming start_time and end_time are stored in the cart items
+            $endTime = $item->end_time;
+    
+            if (!$this->checkProductAvailabilityForRental(
+                $item->product_id, 
+                $item->quantity, 
+                $startDate, 
+                $endDate,
+                $startTime, // Include start time in the check
+                $endTime   // Include end time in the check
+            )) {
+                return response()->json(['message' => "Product ID {$item->product_id} is not available for the selected dates and times"], 422);
             }
-
-            // Calculate total price based on the product's rental price, quantity, and number of days
-            $days = Carbon::parse($startDate)->diffInDays(Carbon::parse($endDate)) + 1;
-            $totalPrice += $item->product->price_per_day * $item->quantity * $days;
         }
 
         // Create booking
         $booking = new Booking([
             'user_id' => $user->id,
-            'address_id' => $validated['address_id'], // Use the provided address_id
-            'start_datetime' => $startDate,
-            'end_datetime' => $endDate,
-            'status' => 'confirmed', // Assuming you have a status field to track booking status
+            'address_id' => $validated['address_id'],
+            'start_datetime' => $startDate . ' ' . $cart->cartItems->min('start_time'),
+            'end_datetime' => $endDate . ' ' . $cart->cartItems->max('end_time'),
+            'status' => 'confirmed',
             'price' => $totalPrice,
         ]);
         $booking->save();
