@@ -150,6 +150,7 @@ class VendorRegisterController extends Controller
             'languages' => $request->languages,
             'profile_picture' => $profilePicturePath,
             'referral_code' => $request->referral_code,
+            'status' => 'pending', // Set status to pending
         ]);
 
         return response()->json(['message' => 'Vendor registered successfully.'], 201);

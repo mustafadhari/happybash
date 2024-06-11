@@ -23,7 +23,8 @@ class Vendor extends Model
         'address',
         'languages',
         'profile_picture',
-        'referral_code'
+        'referral_code',
+        'status',
     ];
 
     public function user()
