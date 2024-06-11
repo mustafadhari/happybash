@@ -11,7 +11,19 @@ class Vendor extends Model
 
     protected $fillable = [
         'user_id',
-        'national_id_card',
+        'first_name',
+        'last_name',
+        'business_name',
+        'date_of_birth',
+        'primary_mobile_number',
+        'whatsapp_number',
+        'email',
+        'business_category',
+        'city',
+        'address',
+        'languages',
+        'profile_picture',
+        'referral_code'
     ];
 
     public function user()
@@ -19,19 +31,9 @@ class Vendor extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function products()
+    public function documents()
     {
-        return $this->hasMany(Product::class);
-    }
-    
-    public function services()
-    {
-        return $this->hasMany(Service::class);
-    }
-    
-    public function events()
-    {
-        return $this->hasMany(Event::class);
+        return $this->hasMany(Document::class);
     }
 
 

@@ -19,6 +19,10 @@ use App\Http\Controllers\LabelTranslationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\WaitlistController;
+use App\Http\Controllers\VendorRegisterController;
+use App\Http\Controllers\VendorLoginController;
+use App\Http\Controllers\VendorController;
+
 
 
 /*
@@ -36,6 +40,21 @@ Route::post('/send-otp', [RegisterController::class, 'sendOTP']);
 Route::post('/verify-otp', [RegisterController::class, 'verifyOTP']);
 Route::post('/finalize-registration', [RegisterController::class, 'finalizeRegistration']);
 Route::post('/register-device', [DeviceController::class, 'register']);
+
+
+Route::group(['prefix' => 'vendor'], function () {
+    // Registration routes
+    Route::post('request-otp', [VendorRegisterController::class, 'requestOtp']);
+    Route::post('verify-otp', [VendorRegisterController::class, 'verifyOtp']);
+    Route::post('register', [VendorRegisterController::class, 'register']);
+
+    // Authentication routes
+    Route::post('login', [VendorLoginController::class, 'login']);
+    Route::post('logout', [VendorLoginController::class, 'logout']);
+
+    // Other vendor-related routes
+    Route::post('upload-document', [VendorController::class, 'uploadDocument']);
+});
 
 Route::apiResource('categories', CategoryController::class);
 Route::get('/categories/{category_id}/subcategories', [SubcategoryController::class, 'index']);

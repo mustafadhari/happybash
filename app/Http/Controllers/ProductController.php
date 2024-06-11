@@ -30,6 +30,11 @@ class ProductController extends Controller
             $query->where('location_id', $request->input('location_id'));
         }
 
+        // Filter by price range
+        if ($request->has('min_price') && $request->has('max_price')) {
+            $query->whereBetween('price_per_day', [$request->input('min_price'), $request->input('max_price')]);
+        }
+
         $products = $query->with('subcategory', 'images')->get();
 
         return response()->json($products);

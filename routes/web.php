@@ -11,6 +11,7 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\VendorAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('cart.add');
     Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.show');
     Route::get('logout', [HappyBashController::class, 'logout']);
+});
+
+
+Route::group(['prefix' => 'vendor'], function () {
+    Route::get('login', [VendorAuthController::class, 'showLoginForm'])->name('vendor.login');
+    Route::post('login', [VendorAuthController::class, 'login']);
+    Route::post('logout', [VendorAuthController::class, 'logout'])->name('vendor.logout');
+
+    Route::get('register', [VendorAuthController::class, 'showRegistrationForm'])->name('vendor.register');
+    Route::post('register', [VendorAuthController::class, 'register']);
 });
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [PageController::class, 'showAboutUs']);
