@@ -24,7 +24,7 @@ class CartController extends Controller
             'end_time' => 'required|date_format:H:i|after:start_time'
         ]);
 
-        if (!$this->checkProductAvailabilityForRental($validated['product_id'], $validated['quantity'], $validated['start_date'], $validated['end_date'])) {
+        if (!$this->checkProductAvailabilityForRental($validated['product_id'], $validated['quantity'], $validated['start_date'], $validated['end_date'], $validated['start_time'], $validated['end_time'])) {
             if ($request->wantsJson()) {
                 return response()->json(['message' => 'Product not available for the selected dates'], 422);
             } else {
