@@ -19,7 +19,7 @@ class CartController extends Controller
             'product_id' => 'required|exists:products,id',
             'quantity' => 'required|integer|min:1',
             'start_date' => 'required|date',
-            'end_date' => 'required|date|after:start_date',
+            'end_date' => 'required|date',
             'start_time' => 'required|date_format:H:i', // Validate time format (24-hour format)
             'end_time' => 'required|date_format:H:i|after:start_time'
         ]);
